@@ -80,8 +80,8 @@
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/TutorialPaper> a owl:Class ;
     rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/PaperLearningResource> .
 
-<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/UX> a owl:Class ;
-    rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/Digital> .
+<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/UX> a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/Digital>,
+        owl:NamedIndividual .
 
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/WebsiteLearningResource> a owl:Class ;
     rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/LearningResource> .
