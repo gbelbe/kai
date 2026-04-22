@@ -27,6 +27,9 @@
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/InternalUseCase> a owl:Class ;
     rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/UseCase> .
 
+<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/KnowledgeEngineer> a owl:Class ;
+    rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/Digital> .
+
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/LargeLanguageModel> a owl:Class ;
     rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/ArtificialIntelligence> .
 
@@ -69,8 +72,7 @@
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/Taxonomy> a owl:Class ;
     rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SemanticModeling> .
 
-<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/The_Missing_Layer:_Why_Semantics_and_Knowledge_Graphs_Are_Essential_for_AI-Ready_Data_Systems> a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/KnowledgeEngineer>,
-        <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/UX>,
+<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/The_Missing_Layer:_Why_Semantics_and_Knowledge_Graphs_Are_Essential_for_AI-Ready_Data_Systems> a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/VideoLearningResource>,
         owl:NamedIndividual ;
     rdfs:label "The Missing Layer: Why Semantics and Knowledge Graphs Are Essential for AI-Ready Data Systems" ;
     rdfs:comment "https://www.youtube.com/watch?v=-udYsiECe3o" .
@@ -78,8 +80,8 @@
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/TutorialPaper> a owl:Class ;
     rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/PaperLearningResource> .
 
-<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/VideoLearningResource> a owl:Class ;
-    rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/LearningResource> .
+<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/UX> a owl:Class ;
+    rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/Digital> .
 
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/WebsiteLearningResource> a owl:Class ;
     rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/LearningResource> .
@@ -93,11 +95,8 @@
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/HumanInterface> a owl:Class ;
     rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/KnowledgeExposition> .
 
-<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/KnowledgeEngineer> a owl:Class ;
-    rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/Digital> .
-
-<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/UX> a owl:Class ;
-    rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/Digital> .
+<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/VideoLearningResource> a owl:Class ;
+    rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/LearningResource> .
 
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/ArtificialIntelligence> a owl:Class ;
     rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/TopicOfInterest> .
