@@ -33,14 +33,14 @@
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/LargeLanguageModel> a owl:Class ;
     rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/ArtificialIntelligence> .
 
-<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/MCP> a owl:Class ;
-    rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SystemInterface> .
+<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/MCP> a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SystemInterface>,
+        owl:NamedIndividual .
 
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/MoocLearningResource> a owl:Class ;
     rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/LearningResource> .
 
-<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/Ontology> a owl:Class ;
-    rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SemanticModeling> .
+<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/Ontology> a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SemanticModeling>,
+        owl:NamedIndividual .
 
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/People> a owl:Class .
 
@@ -69,8 +69,8 @@
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SubjectMatterExpert> a owl:Class ;
     rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/Business> .
 
-<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/Taxonomy> a owl:Class ;
-    rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SemanticModeling> .
+<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/Taxonomy> a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SemanticModeling>,
+        owl:NamedIndividual .
 
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/The_Missing_Layer:_Why_Semantics_and_Knowledge_Graphs_Are_Essential_for_AI-Ready_Data_Systems> a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/VideoLearningResource>,
         owl:NamedIndividual ;
