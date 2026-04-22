@@ -1,6 +1,11 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
+<file:///Users/20002797/Documents/kai/hasTopicOfInterest> a owl:ObjectProperty ;
+    rdfs:label "hasTopicOfInterest"@en ;
+    rdfs:domain <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/LearningResource> ;
+    rdfs:range <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/TopicOfInterest> .
+
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/API> a owl:Class ;
     rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SystemInterface> .
 
@@ -45,11 +50,10 @@
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SemanticLanguage> a owl:Class ;
     rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SemanticLayer> .
 
+<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SemanticMethodology> a owl:Class ;
+    rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SemanticLayer> .
+
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/Semantic_Modeling_for_Data> a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/BookLearningResource>,
-        <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/KnowledgeEngineer>,
-        <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SemanticMethodology>,
-        <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SemanticModeling>,
-        <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/UX>,
         owl:NamedIndividual .
 
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SoftwareArchitect> a owl:Class ;
@@ -89,16 +93,16 @@
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/HumanInterface> a owl:Class ;
     rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/KnowledgeExposition> .
 
-<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SemanticMethodology> a owl:Class ;
-    rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SemanticLayer> .
+<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/KnowledgeEngineer> a owl:Class ;
+    rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/Digital> .
+
+<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/UX> a owl:Class ;
+    rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/Digital> .
 
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/ArtificialIntelligence> a owl:Class ;
     rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/TopicOfInterest> .
 
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/Function> a owl:Class .
-
-<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/KnowledgeEngineer> a owl:Class ;
-    rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/Digital> .
 
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/KnowledgeExposition> a owl:Class ;
     rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/TopicOfInterest> .
@@ -106,20 +110,17 @@
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/PaperLearningResource> a owl:Class ;
     rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/LearningResource> .
 
+<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SemanticModeling> a owl:Class ;
+    rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SemanticLayer> .
+
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SystemInterface> a owl:Class ;
     rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/KnowledgeExposition> .
-
-<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/UX> a owl:Class ;
-    rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/Digital> .
 
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/UseCase> a owl:Class ;
     rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/TopicOfInterest> .
 
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/Digital> a owl:Class ;
     rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/Function> .
-
-<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SemanticModeling> a owl:Class ;
-    rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SemanticLayer> .
 
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SemanticLayer> a owl:Class ;
     rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/TopicOfInterest> .
