@@ -6,26 +6,26 @@
     rdfs:domain <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/LearningResource> ;
     rdfs:range <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/TopicOfInterest> .
 
-<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/API> a owl:Class ;
-    rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SystemInterface> .
+<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/API> a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SystemInterface>,
+        owl:NamedIndividual .
 
-<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/DataScience> a owl:Class ;
-    rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/ArtificialIntelligence> .
+<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/DataScience> a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/ArtificialIntelligence>,
+        owl:NamedIndividual .
 
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/EventLearningResource> a owl:Class ;
     rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/LearningResource> .
 
-<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/ExternalUseCase> a owl:Class ;
-    rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/UseCase> .
+<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/ExternalUseCase> a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/UseCase>,
+        owl:NamedIndividual .
 
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/GraphDatabase> a owl:Class ;
     rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/TopicOfInterest> .
 
-<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/GraphViz> a owl:Class ;
-    rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/HumanInterface> .
+<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/GraphViz> a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/HumanInterface>,
+        owl:NamedIndividual .
 
-<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/InternalUseCase> a owl:Class ;
-    rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/UseCase> .
+<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/InternalUseCase> a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/UseCase>,
+        owl:NamedIndividual .
 
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/KnowledgeEngineer> a owl:Class ;
     rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/Digital> .
@@ -63,8 +63,8 @@
     rdfs:label "architect"@en ;
     rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/Digital> .
 
-<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SoftwareArchitecture> a owl:Class ;
-    rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/TopicOfInterest> .
+<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SoftwareArchitecture> a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/TopicOfInterest>,
+        owl:NamedIndividual .
 
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SubjectMatterExpert> a owl:Class ;
     rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/Business> .
