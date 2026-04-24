@@ -1,145 +1,437 @@
 @prefix ns1: <file:///Users/20002797/Documents/kai/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+
+ns1:hasExpertise a owl:ObjectProperty ;
+    rdfs:domain <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/Function> ;
+    rdfs:range <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/TopicOfInterest> .
 
 ns1:hasTopicOfInterest a owl:ObjectProperty ;
     rdfs:label "hasTopicOfInterest"@en ;
     rdfs:domain <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/LearningResource> ;
     rdfs:range <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/TopicOfInterest> .
 
-<hasExpertise> a owl:ObjectProperty ;
-    rdfs:domain <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/Function> ;
-    rdfs:range <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/TopicOfInterest> .
-
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/API> a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SystemInterface>,
-        owl:NamedIndividual .
+        owl:NamedIndividual ;
+    rdfs:label "API"@en ;
+    rdfs:comment """## Application Programming Interface (API)
+
+An **API** is a defined contract through which software systems communicate — exposing capabilities or data in a structured, programmatic way.
+
+In KAI's architecture, APIs are the primary mechanism for exposing ontological knowledge to consuming applications: REST APIs over SPARQL endpoints, GraphQL interfaces over the knowledge graph, and tool-calling APIs for LLM integrations.""" ;
+    schema:url <https://en.wikipedia.org/wiki/API> .
 
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/DataScience> a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/ArtificialIntelligence>,
-        owl:NamedIndividual .
+        owl:NamedIndividual ;
+    rdfs:label "Data Science"@en ;
+    rdfs:comment """## Data Science
+
+An interdisciplinary field that uses **statistical methods, machine learning, and computational tools** to extract knowledge and insights from structured and unstructured data.
+
+KAI engages with data science at the interface of semantic technologies — using ontologies as the semantic backbone for feature engineering, data integration, and explainable AI pipelines.""" ;
+    schema:url <https://en.wikipedia.org/wiki/Data_science> .
 
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/EventLearningResource> a owl:Class ;
-    rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/LearningResource> .
+    rdfs:label "Event"@en ;
+    rdfs:comment "A conference, workshop, or meetup — either attended live or as recorded content — covering topics relevant to KAI." ;
+    rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/LearningResource> ;
+    schema:image <https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Conference.jpg/500px-Conference.jpg> ;
+    schema:url <https://en.wikipedia.org/wiki/Academic_conference> .
 
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/ExternalUseCase> a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/UseCase>,
-        owl:NamedIndividual .
+        owl:NamedIndividual ;
+    rdfs:label "External Use Case"@en ;
+    rdfs:comment """## External Use Case
+
+A KAI application delivered to clients, partners, or as a public-facing product — such as a client-facing knowledge hub, a product recommendation engine powered by a product taxonomy, or a regulatory compliance ontology.
+
+External use cases are the **commercial output** of KAI's knowledge engineering capabilities.""" .
 
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/GraphDatabase> a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/TopicOfInterest>,
-        owl:NamedIndividual .
+        owl:NamedIndividual ;
+    rdfs:label "Graph Database"@en ;
+    rdfs:comment """## Graph Database
+
+A **graph database** stores data as nodes and relationships rather than tables — making it the natural persistence layer for knowledge graphs and ontologies.
+
+KAI evaluates and uses graph databases such as **Neo4j**, **Amazon Neptune**, and **Ontotext GraphDB** as the backend for storing and querying RDF-based knowledge graphs at scale.""" ;
+    schema:image <https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/GraphDatabase_PropertyGraph.png/500px-GraphDatabase_PropertyGraph.png> ;
+    schema:url <https://en.wikipedia.org/wiki/Graph_database> .
 
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/GraphViz> a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/HumanInterface>,
-        owl:NamedIndividual .
+        owl:NamedIndividual ;
+    rdfs:label "Graph Visualisation"@en ;
+    rdfs:comment """## Graph Visualisation
+
+An interactive visual representation of the knowledge graph — showing classes, individuals, and relationships as nodes and edges.
+
+KAI's graph visualisation is built with **D3.js** and embedded directly in the browser. It supports:
+- Force-directed layouts for ontology exploration
+- Lane-based hierarchical layouts for SKOS taxonomies
+- Color-coded clusters per root class or top concept
+- Interactive drag, zoom, and highlighting""" ;
+    schema:image <https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/6n-graf.svg/500px-6n-graf.svg.png> ;
+    schema:url <https://en.wikipedia.org/wiki/Graph_drawing> .
 
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/InternalUseCase> a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/UseCase>,
-        owl:NamedIndividual .
+        owl:NamedIndividual ;
+    rdfs:label "Internal Use Case"@en ;
+    rdfs:comment """## Internal Use Case
+
+A KAI application that serves the organisation's own operations — such as an internal knowledge search, employee onboarding assistant, or automated taxonomy governance tool.
+
+Internal use cases demonstrate the **value of semantic infrastructure** to internal stakeholders and build the team's delivery capability.""" .
 
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/KnowledgeEngineer> a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/Digital>,
         owl:NamedIndividual ;
-    <hasExpertise> <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/Ontology>,
+    rdfs:label "Knowledge Engineer"@en ;
+    ns1:hasExpertise <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/Ontology>,
         <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SemanticMethodology>,
         <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SemanticModeling>,
-        <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/Taxonomy> .
+        <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/Taxonomy> ;
+    rdfs:comment """## Knowledge Engineer
+
+A **knowledge engineer** designs and builds formal knowledge representations — ontologies, taxonomies, and knowledge graphs — that capture domain expertise in a machine-processable form.
+
+Core skills include: OWL/SKOS modelling, SPARQL querying, ontology design patterns, collaborative elicitation from subject-matter experts, and semantic tool use (Protégé, ster, GraphDB).""" ;
+    schema:url <https://en.wikipedia.org/wiki/Knowledge_engineering> .
 
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/LargeLanguageModel> a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/ArtificialIntelligence>,
-        owl:NamedIndividual .
+        owl:NamedIndividual ;
+    rdfs:label "Large Language Model"@en ;
+    rdfs:comment """## Large Language Model (LLM)
+
+A **Large Language Model** is a deep learning model trained on massive text corpora, capable of generating, summarising, translating, and reasoning over natural language.
+
+LLMs such as GPT-4, Claude, and Llama are central to KAI's AI integration strategy — they act as the natural-language layer on top of the structured knowledge graph, enabling conversational access to ontological knowledge.""" ;
+    schema:image <https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/ChatGPT.png/500px-ChatGPT.png> ;
+    schema:url <https://en.wikipedia.org/wiki/Large_language_model> .
 
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/MCP> a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SystemInterface>,
-        owl:NamedIndividual .
+        owl:NamedIndividual ;
+    rdfs:label "MCP — Model Context Protocol"@en ;
+    rdfs:comment """## Model Context Protocol (MCP)
+
+The **Model Context Protocol** is an open standard developed by Anthropic that defines how AI models (such as Claude) connect to external tools, data sources, and services.
+
+KAI uses MCP to give LLMs **structured access to the knowledge graph** — enabling AI agents to query ontologies, retrieve concept definitions, and traverse semantic relationships in real time, without hallucinating facts.""" ;
+    schema:url <https://modelcontextprotocol.io> .
 
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/MoocLearningResource> a owl:Class ;
-    rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/LearningResource> .
+    rdfs:label "MOOC"@en ;
+    rdfs:comment """## MOOC — Massive Open Online Course
 
-<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/People> a owl:Class .
+An online course accessible to anyone, typically offering structured modules, exercises, and a certificate. MOOCs are a primary pathway for KAI team members to build depth on technical topics.""" ;
+    rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/LearningResource> ;
+    schema:image <https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Moodle-logo.svg/500px-Moodle-logo.svg.png> ;
+    schema:url <https://en.wikipedia.org/wiki/Massive_open_online_course> .
+
+<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/People> a owl:Class ;
+    rdfs:label "People"@en ;
+    rdfs:comment """## People
+
+Individuals who interact with or contribute to KAI's knowledge base — practitioners, researchers, or internal team members who hold expertise in one or more Topics of Interest.""" ;
+    schema:image <https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/People_icon.svg/500px-People_icon.svg.png> ;
+    schema:url <https://en.wikipedia.org/wiki/Knowledge_worker> .
 
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/ScientificPaper> a owl:Class ;
-    rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/PaperLearningResource> .
+    rdfs:label "Scientific Paper"@en ;
+    rdfs:comment "A peer-reviewed research publication presenting original findings relevant to KAI's topics — typically from venues such as ISWC, WWW, or NeurIPS." ;
+    rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/PaperLearningResource> ;
+    schema:image <https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/DOI_logo.svg/500px-DOI_logo.svg.png> ;
+    schema:url <https://en.wikipedia.org/wiki/Scientific_literature> .
 
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SemanticLanguage> a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SemanticLayer>,
-        owl:NamedIndividual .
+        owl:NamedIndividual ;
+    rdfs:label "Semantic Language"@en ;
+    rdfs:comment """## Semantic Language
+
+The formal languages used to express ontologies, taxonomies, and knowledge graphs in a machine-readable way.
+
+Key languages in KAI's stack:
+- **RDF** — Resource Description Framework (triple model)
+- **OWL** — Web Ontology Language (rich class logic)
+- **SKOS** — Simple Knowledge Organization System (taxonomies)
+- **SPARQL** — query language for RDF graphs
+- **Turtle / JSON-LD** — serialisation formats""" ;
+    schema:url <https://en.wikipedia.org/wiki/Semantic_Web#Semantic_Web_technologies> .
 
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/Semantic_Modeling_for_Data> a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/BookLearningResource>,
         owl:NamedIndividual ;
-    ns1:hasTopicOfInterest <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SemanticModeling> .
+    rdfs:label "Semantic Modeling for Data"@en ;
+    ns1:hasTopicOfInterest <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SemanticModeling> ;
+    rdfs:comment """## Semantic Modeling for Data
+
+*Semantic Modeling for Data* by **Panos Alexopoulos** (O'Reilly, 2020) is a practical guide to designing semantically rich data models — covering ontologies, taxonomies, and knowledge graphs with real-world examples.
+
+A foundational text for KAI's knowledge engineering practice, covering:
+- The what and why of semantic modeling
+- Ontology design patterns
+- Integration with data architecture
+- Governance considerations""" ;
+    schema:image <https://learning.oreilly.com/covers/urn:orm:book:9781492054269/400w/> ;
+    schema:url <https://www.oreilly.com/library/view/semantic-modeling-for/9781492054269/> .
 
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SoftwareArchitect> a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/Digital>,
         owl:NamedIndividual ;
-    rdfs:label "architect"@en .
+    rdfs:label "Software Architect"@en ;
+    rdfs:comment """## Software Architect
+
+A **software architect** defines the structural blueprint of systems — choosing technologies, defining integration patterns, and ensuring non-functional requirements (scalability, maintainability, security) are met.
+
+In KAI's context, software architects shape how semantic infrastructure is embedded into the broader technology landscape — API design, knowledge graph backends, LLM orchestration.""" ;
+    schema:url <https://en.wikipedia.org/wiki/Software_architect> .
 
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SoftwareArchitecture> a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/TopicOfInterest>,
-        owl:NamedIndividual .
+        owl:NamedIndividual ;
+    rdfs:label "Software Architecture"@en ;
+    rdfs:comment """## Software Architecture
+
+The high-level structure of a software system — the organisation of components, their responsibilities, and the patterns governing how they interact.
+
+KAI's knowledge infrastructure requires architectural decisions about: knowledge graph storage, API design, LLM integration patterns, and the separation of the semantic layer from application logic.""" ;
+    schema:url <https://en.wikipedia.org/wiki/Software_architecture> .
 
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SubjectMatterExpert> a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/Business>,
         owl:NamedIndividual ;
-    <hasExpertise> <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SemanticGovernance> .
+    rdfs:label "Subject Matter Expert"@en ;
+    ns1:hasExpertise <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SemanticGovernance> ;
+    rdfs:comment """## Subject Matter Expert (SME)
+
+A **subject matter expert** holds deep domain knowledge in a specific area — finance, legal, marketing, or a technical discipline.
+
+In KAI's ontology engineering process, SMEs are essential collaborators: they validate concept definitions, confirm hierarchical relationships, and ensure the semantic model reflects real-world domain semantics rather than a technical abstraction.""" ;
+    schema:url <https://en.wikipedia.org/wiki/Subject-matter_expert> .
 
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/The_Missing_Layer:_Why_Semantics_and_Knowledge_Graphs_Are_Essential_for_AI-Ready_Data_Systems> a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/VideoLearningResource>,
         owl:NamedIndividual ;
-    rdfs:label "The Missing Layer: Why Semantics and Knowledge Graphs Are Essential for AI-Ready Data Systems" ;
+    rdfs:label "The Missing Layer: Why Semantics and Knowledge Graphs Are Essential for AI-Ready Data Systems"@en ;
     ns1:hasTopicOfInterest <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/Ontology> ;
-    rdfs:comment "https://www.youtube.com/watch?v=-udYsiECe3o" .
+    rdfs:comment """## The Missing Layer
+
+A talk arguing that **semantic technologies and knowledge graphs are the missing layer** between raw data and AI-ready data systems.
+
+The speaker makes the case that without explicit semantics — ontologies, controlled vocabularies, formal relationships — AI systems cannot reliably interpret, integrate, or reason over enterprise data at scale.""" ;
+    schema:video <https://www.youtube.com/watch?v=-udYsiECe3o> .
 
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/TutorialPaper> a owl:Class ;
-    rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/PaperLearningResource> .
+    rdfs:label "Tutorial Paper"@en ;
+    rdfs:comment "A practitioner-oriented paper or technical report written in a step-by-step tutorial style — focused on showing *how* to apply a technology rather than reporting novel research." ;
+    rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/PaperLearningResource> ;
+    schema:image <https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Open_Access_logo_PLoS_white.svg/500px-Open_Access_logo_PLoS_white.svg.png> ;
+    schema:url <https://en.wikipedia.org/wiki/Tutorial> .
 
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/UX> a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/Digital>,
-        owl:NamedIndividual .
+        owl:NamedIndividual ;
+    rdfs:label "UX Designer"@en ;
+    rdfs:comment """## UX Designer — User Experience
+
+A **UX designer** shapes how users interact with products and services — from information architecture and navigation flows to visual design and accessibility.
+
+KAI collaborates with UX designers to make semantic knowledge **human-readable**: topic hub pages, taxonomy browsers, graph visualisations, and conversational AI interfaces.""" ;
+    schema:url <https://en.wikipedia.org/wiki/User_experience> .
 
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/WebsiteLearningResource> a owl:Class ;
-    rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/LearningResource> .
+    rdfs:label "Website"@en ;
+    rdfs:comment "A website, documentation portal, or online guide curated as an ongoing reference for a KAI topic of interest." ;
+    rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/LearningResource> ;
+    schema:image <https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Internet.svg/500px-Internet.svg.png> ;
+    schema:url <https://en.wikipedia.org/wiki/Website> .
 
 <https://example.org/ontology/kai-internal-knowledge> a owl:Ontology ;
     rdfs:label "Kai" .
 
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/BookLearningResource> a owl:Class ;
-    rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/LearningResource> .
+    rdfs:label "Book"@en ;
+    rdfs:comment "A full-length book curated by KAI as a foundational or reference learning resource on a topic of interest." ;
+    rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/LearningResource> ;
+    schema:image <https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Open_book_nae_02.svg/500px-Open_book_nae_02.svg.png> ;
+    schema:url <https://en.wikipedia.org/wiki/Book> .
 
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/Business> a owl:Class ;
-    rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/Function> .
+    rdfs:label "Business Function"@en ;
+    rdfs:comment """## Business Function
+
+Domain-facing roles — subject-matter experts, product managers, analysts — who own the **business meaning** behind the concepts modelled in KAI's ontologies.
+
+Business functions provide the semantic grounding that makes the knowledge graph accurate and relevant.""" ;
+    rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/Function> ;
+    schema:image <https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Handshake.svg/500px-Handshake.svg.png> ;
+    schema:url <https://en.wikipedia.org/wiki/Business_function> .
 
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/HumanInterface> a owl:Class ;
-    rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/KnowledgeExposition> .
+    rdfs:label "Human Interface"@en ;
+    rdfs:comment """## Human Interface
+
+A visual or interactive interface through which people explore and consume knowledge — graph visualisations, dashboards, browse-able taxonomies, and topic hub pages.
+
+Human interfaces translate machine-readable ontologies into **navigable, meaningful experiences** for non-technical users.""" ;
+    rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/KnowledgeExposition> ;
+    schema:image <https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Dashboard.png/500px-Dashboard.png> ;
+    schema:url <https://en.wikipedia.org/wiki/User_interface> .
 
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SemanticGovernance> a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SemanticLayer>,
-        owl:NamedIndividual .
+        owl:NamedIndividual ;
+    rdfs:label "Semantic Governance"@en ;
+    rdfs:comment """## Semantic Governance
+
+The policies, processes, and organisational structures that ensure semantic artefacts remain **accurate, consistent, and governed** over time.
+
+Semantic governance addresses: who owns a concept, how changes are approved, how versioning is managed, and how semantic assets align with enterprise data governance frameworks.""" ;
+    schema:url <https://en.wikipedia.org/wiki/Data_governance> .
 
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SemanticMethodology> a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SemanticLayer>,
-        owl:NamedIndividual .
+        owl:NamedIndividual ;
+    rdfs:label "Semantic Methodology"@en ;
+    rdfs:comment """## Semantic Methodology
+
+The structured approaches and best practices KAI follows when designing and maintaining semantic artefacts — ontologies, taxonomies, knowledge graphs.
+
+This includes ontology design patterns, naming conventions, modelling guidelines, collaborative elicitation techniques with subject-matter experts, and quality validation workflows.""" .
 
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/Taxonomy> a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SemanticLayer>,
-        owl:NamedIndividual .
+        owl:NamedIndividual ;
+    rdfs:label "Taxonomy"@en ;
+    rdfs:comment """## Taxonomy
+
+A **taxonomy** is a hierarchical classification system that organises concepts into parent–child relationships (broader/narrower terms).
+
+In KAI's context, taxonomies are built using the **SKOS** standard and serve as controlled vocabularies for tagging, search, and navigation across organisational knowledge assets.""" ;
+    schema:url <https://en.wikipedia.org/wiki/Taxonomy> .
 
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/VideoLearningResource> a owl:Class ;
-    rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/LearningResource> .
+    rdfs:label "Video"@en ;
+    rdfs:comment "A recorded talk, lecture, or tutorial video — from YouTube, conference recordings, or online platforms — covering a KAI topic of interest." ;
+    rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/LearningResource> ;
+    schema:image <https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/500px-YouTube_full-color_icon_%282017%29.svg.png> ;
+    schema:url <https://en.wikipedia.org/wiki/Educational_video> .
 
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/ArtificialIntelligence> a owl:Class ;
-    rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/TopicOfInterest> .
+    rdfs:label "Artificial Intelligence"@en ;
+    rdfs:comment """## Artificial Intelligence
+
+Artificial Intelligence (AI) refers to the simulation of human intelligence by machines — encompassing reasoning, learning, perception, and language understanding.
+
+KAI focuses on **applied AI**: how techniques such as large language models, machine learning, and knowledge graphs can be combined with semantic technologies to power intelligent, interoperable data systems.""" ;
+    rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/TopicOfInterest> ;
+    schema:image <https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Artificial_neural_network.svg/500px-Artificial_neural_network.svg.png> ;
+    schema:url <https://en.wikipedia.org/wiki/Artificial_intelligence> .
 
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/KnowledgeExposition> a owl:Class ;
-    rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/TopicOfInterest> .
+    rdfs:label "Knowledge Exposition"@en ;
+    rdfs:comment """## Knowledge Exposition
+
+The means by which KAI's structured knowledge is **surfaced and made accessible** — both to human users through visual interfaces and to software systems through programmatic APIs.
+
+Knowledge exposition bridges the gap between the knowledge graph and its consumers.""" ;
+    rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/TopicOfInterest> ;
+    schema:image <https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/LOD_Cloud_-_2011-09.png/500px-LOD_Cloud_-_2011-09.png> .
 
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/Ontology> a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SemanticLayer>,
-        owl:NamedIndividual .
+        owl:NamedIndividual ;
+    rdfs:label "Ontology"@en ;
+    rdfs:comment """## Ontology
+
+In information science, an **ontology** is a formal, explicit specification of a shared conceptualisation — a machine-readable model of a domain that defines concepts, relationships, and constraints.
+
+KAI uses OWL ontologies to model the organisation's knowledge domains, enabling automated reasoning, interoperability, and AI integration.
+
+Key standards: **OWL 2**, **RDF**, **RDFS**, **SPARQL**.""" ;
+    schema:image <https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Wikidata-logo-en.svg/500px-Wikidata-logo-en.svg.png> ;
+    schema:url <https://en.wikipedia.org/wiki/Ontology_(information_science)> .
 
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/PaperLearningResource> a owl:Class ;
-    rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/LearningResource> .
+    rdfs:label "Paper"@en ;
+    rdfs:comment "An academic or technical paper — including scientific research and practitioner tutorials — curated for its relevance to KAI's topics of interest." ;
+    rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/LearningResource> ;
+    schema:image <https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Open_Access_logo_PLoS_white.svg/500px-Open_Access_logo_PLoS_white.svg.png> ;
+    schema:url <https://en.wikipedia.org/wiki/Academic_publishing> .
 
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SemanticModeling> a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SemanticLayer>,
-        owl:NamedIndividual .
+        owl:NamedIndividual ;
+    rdfs:label "Semantic Modeling"@en ;
+    rdfs:comment """## Semantic Modeling
+
+Semantic modeling is the process of **representing knowledge in a machine-interpretable form** — capturing not just data structure, but meaning, context, and the relationships between concepts.
+
+KAI applies semantic modeling to build ontologies, taxonomies, and knowledge graphs that reflect the real-world semantics of the organisation's domains.""" ;
+    schema:url <https://en.wikipedia.org/wiki/Semantic_data_model> .
 
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SystemInterface> a owl:Class ;
-    rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/KnowledgeExposition> .
+    rdfs:label "System Interface"@en ;
+    rdfs:comment """## System Interface
+
+A programmatic interface through which software systems access and consume structured knowledge — APIs, Model Context Protocols (MCP), SPARQL endpoints, and data feeds.
+
+System interfaces allow AI systems and applications to **query and reason** over the knowledge graph programmatically.""" ;
+    rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/KnowledgeExposition> ;
+    schema:image <https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/W3C_icon.svg/500px-W3C_icon.svg.png> ;
+    schema:url <https://en.wikipedia.org/wiki/Interface_(computing)> .
 
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/UseCase> a owl:Class ;
-    rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/TopicOfInterest> .
+    rdfs:label "Use Case"@en ;
+    rdfs:comment """## Use Case
+
+A concrete application or scenario in which KAI's knowledge assets — ontologies, taxonomies, AI integrations — deliver value to the organisation.
+
+Use cases are classified as **Internal** (serving the organisation's own processes) or **External** (serving clients, partners, or public-facing products).""" ;
+    rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/TopicOfInterest> ;
+    schema:image <https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/UML_Use_Case_diagram.svg/500px-UML_Use_Case_diagram.svg.png> ;
+    schema:url <https://en.wikipedia.org/wiki/Use_case> .
 
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/Digital> a owl:Class ;
-    rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/Function> .
+    rdfs:label "Digital Function"@en ;
+    rdfs:comment """## Digital Function
 
-<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/Function> a owl:Class .
+Technical roles within the organisation — engineers, architects, data scientists, UX designers — who build, maintain, or integrate with KAI's knowledge assets.
+
+Digital functions are both **producers** of ontological structures and **consumers** of KAI's APIs and interfaces.""" ;
+    rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/Function> ;
+    schema:image <https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Function_machine2.svg/500px-Function_machine2.svg.png> ;
+    schema:url <https://en.wikipedia.org/wiki/Digital_transformation> .
+
+<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/Function> a owl:Class ;
+    rdfs:label "Function"@en ;
+    rdfs:comment """## Function
+
+An organisational role or capability that interacts with KAI's knowledge assets.
+
+Functions are either **Digital** (technical roles such as engineers and architects) or **Business** (domain roles such as subject-matter experts). KAI maps expertise to functions to understand who needs what knowledge.""" ;
+    schema:image <https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Organizational_chart.png/500px-Organizational_chart.png> ;
+    schema:url <https://en.wikipedia.org/wiki/Organizational_chart> .
 
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SemanticLayer> a owl:Class ;
-    rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/TopicOfInterest> .
+    rdfs:label "Semantic Layer"@en ;
+    rdfs:comment """## Semantic Layer
 
-<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/LearningResource> a owl:Class .
+The Semantic Layer is the set of **technologies, methods, and standards** that give meaning to data — enabling machines and humans to interpret and exchange information consistently.
 
-<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/TopicOfInterest> a owl:Class .
+KAI's semantic layer spans ontologies, taxonomies, knowledge graphs, semantic modeling, and the methodologies that govern their creation and use.
+
+> "Without semantics, data is just syntax." — a guiding principle of KAI's work.""",
+        "The semantic layer of a knowledge graph consists in the taxonomies and ontologies that describes the structures and organisatio of all nodes in the KG"@en ;
+    rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/TopicOfInterest> ;
+    schema:image <https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Semantic_web.svg/500px-Semantic_web.svg.png> ;
+    schema:url <https://en.wikipedia.org/wiki/Semantic_Web> .
+
+<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/LearningResource> a owl:Class ;
+    rdfs:label "Learning Resource"@en ;
+    rdfs:comment """## Learning Resource
+
+Any curated artefact that KAI uses to build or share knowledge — books, MOOCs, papers, videos, events, and websites.
+
+Each resource is linked to one or more **Topics of Interest**, making it easy to discover what to read, watch, or attend for a given knowledge area.""" ;
+    schema:image <https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Global_Open_Educational_Resources_Logo.svg/500px-Global_Open_Educational_Resources_Logo.svg.png> ;
+    schema:url <https://en.wikipedia.org/wiki/Open_educational_resources> .
+
+<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/TopicOfInterest> a owl:Class ;
+    rdfs:label "Topic of Interest"@en ;
+    rdfs:comment """## Topic of Interest
+
+An area of knowledge, technology, or practice that KAI actively tracks, curates resources around, and develops organisational expertise in.
+
+Topics of Interest form the **knowledge map** of KAI — they are the nodes around which learning resources, team expertise, and use cases are organised.""" ;
+    schema:image <https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Semantic_web.svg/500px-Semantic_web.svg.png> ;
+    schema:url <https://en.wikipedia.org/wiki/Knowledge_representation_and_reasoning> .
 
