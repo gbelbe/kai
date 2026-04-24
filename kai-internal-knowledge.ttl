@@ -225,6 +225,7 @@ The speaker makes the case that without explicit semantics — ontologies, contr
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/UX> a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/Digital>,
         owl:NamedIndividual ;
     rdfs:label "UX Designer"@en ;
+    ns1:hasExpertise <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SemanticMethodology> ;
     rdfs:comment """## UX Designer — User Experience
 
 A **UX designer** shapes how users interact with products and services — from information architecture and navigation flows to visual design and accessibility.
@@ -280,15 +281,6 @@ The policies, processes, and organisational structures that ensure semantic arte
 
 Semantic governance addresses: who owns a concept, how changes are approved, how versioning is managed, and how semantic assets align with enterprise data governance frameworks.""" ;
     schema:url <https://en.wikipedia.org/wiki/Data_governance> .
-
-<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SemanticMethodology> a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SemanticLayer>,
-        owl:NamedIndividual ;
-    rdfs:label "Semantic Methodology"@en ;
-    rdfs:comment """## Semantic Methodology
-
-The structured approaches and best practices KAI follows when designing and maintaining semantic artefacts — ontologies, taxonomies, knowledge graphs.
-
-This includes ontology design patterns, naming conventions, modelling guidelines, collaborative elicitation techniques with subject-matter experts, and quality validation workflows.""" .
 
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/Taxonomy> a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SemanticLayer>,
         owl:NamedIndividual ;
@@ -347,6 +339,15 @@ Key standards: **OWL 2**, **RDF**, **RDFS**, **SPARQL**.""" ;
     rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/LearningResource> ;
     schema:image <https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Open_Access_logo_PLoS_white.svg/500px-Open_Access_logo_PLoS_white.svg.png> ;
     schema:url <https://en.wikipedia.org/wiki/Academic_publishing> .
+
+<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SemanticMethodology> a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SemanticLayer>,
+        owl:NamedIndividual ;
+    rdfs:label "Semantic Methodology"@en ;
+    rdfs:comment """## Semantic Methodology
+
+The structured approaches and best practices KAI follows when designing and maintaining semantic artefacts — ontologies, taxonomies, knowledge graphs.
+
+This includes ontology design patterns, naming conventions, modelling guidelines, collaborative elicitation techniques with subject-matter experts, and quality validation workflows.""" .
 
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SemanticModeling> a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SemanticLayer>,
         owl:NamedIndividual ;
