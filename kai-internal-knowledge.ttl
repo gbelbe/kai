@@ -4,6 +4,10 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
 
+<Inria-SemanticWeb-Mooc> a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/MoocLearningResource>,
+        owl:NamedIndividual ;
+    schema:url <https://www.fun-mooc.fr/fr/cours/web-semantique-et-web-de-donnees/> .
+
 ns1:KnowledgeGraphConference a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/EventLearningResource>,
         owl:NamedIndividual ;
     rdfs:label "kgc"@en ;
@@ -132,10 +136,6 @@ ns2:hasExpertise a owl:ObjectProperty ;
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/HumanInterface> a owl:Class ;
     rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/KnowledgeExposition> .
 
-<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/MoocLearningResource> a owl:Class ;
-    rdfs:comment "long video tutorial"@en ;
-    rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/LearningResource> .
-
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SemanticLanguage> a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SemanticLayer>,
         owl:NamedIndividual .
 
@@ -153,6 +153,10 @@ ns2:hasExpertise a owl:ObjectProperty ;
 
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/KnowledgeExposition> a owl:Class ;
     rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/TopicOfInterest> .
+
+<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/MoocLearningResource> a owl:Class ;
+    rdfs:comment "long video tutorial"@en ;
+    rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/LearningResource> .
 
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/PaperLearningResource> a owl:Class ;
     rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/LearningResource> .
