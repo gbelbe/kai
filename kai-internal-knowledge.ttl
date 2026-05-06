@@ -84,6 +84,7 @@ ns2:hasExpertise a owl:ObjectProperty ;
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/People> a owl:Class .
 
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/ScientificPaper> a owl:Class ;
+    rdfs:comment "scientific report"@en ;
     rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/PaperLearningResource> .
 
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/Semantic_Modeling_for_Data> a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/BookLearningResource>,
