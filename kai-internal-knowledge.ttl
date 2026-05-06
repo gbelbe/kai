@@ -4,14 +4,18 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
 
-<Practical-Knowledge-Modeling> a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/MoocLearningResource>,
+<LearningSparql> a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/BookLearningResource>,
         owl:NamedIndividual ;
-    schema:url <https://www.udemy.com/course/practical-knowledge-modelling/> .
+    schema:url <https://www.learningsparql.com/> .
 
 ns2:KnowledgeGraphConference a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/EventLearningResource>,
         owl:NamedIndividual ;
     rdfs:label "kgc"@en ;
     rdfs:comment ""@en .
+
+ns2:Practical-Knowledge-Modeling a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/MoocLearningResource>,
+        owl:NamedIndividual ;
+    schema:url <https://www.udemy.com/course/practical-knowledge-modelling/> .
 
 ns2:SemanticDataEurope a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/EventLearningResource>,
         owl:NamedIndividual ;
@@ -159,9 +163,6 @@ ns1:hasExpertise a owl:ObjectProperty ;
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/UseCase> a owl:Class ;
     rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/TopicOfInterest> .
 
-<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/BookLearningResource> a owl:Class ;
-    rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/LearningResource> .
-
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/Digital> a owl:Class ;
     rdfs:label "Function"@en ;
     rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/Function> .
@@ -170,6 +171,9 @@ ns1:hasExpertise a owl:ObjectProperty ;
     rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/LearningResource> .
 
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/Function> a owl:Class .
+
+<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/BookLearningResource> a owl:Class ;
+    rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/LearningResource> .
 
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/Ontology> a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SemanticLayer>,
         owl:NamedIndividual .
