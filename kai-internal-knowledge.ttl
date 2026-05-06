@@ -11,6 +11,7 @@ ns1:KnowledgeGraphConference a <http://www.semanticweb.org/20014538/ontologies/2
 
 ns1:LearningSparql a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/BookLearningResource>,
         owl:NamedIndividual ;
+    ns1:hasTopicOfInterest <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SemanticLanguage> ;
     schema:url <https://www.learningsparql.com/> .
 
 ns1:Practical-Knowledge-Modeling a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/MoocLearningResource>,
@@ -85,9 +86,6 @@ ns2:hasExpertise a owl:ObjectProperty ;
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/ScientificPaper> a owl:Class ;
     rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/PaperLearningResource> .
 
-<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SemanticLanguage> a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SemanticLayer>,
-        owl:NamedIndividual .
-
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/Semantic_Modeling_for_Data> a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/BookLearningResource>,
         owl:NamedIndividual ;
     ns1:hasTopicOfInterest <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SemanticModeling> .
@@ -136,6 +134,9 @@ ns2:hasExpertise a owl:ObjectProperty ;
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/MoocLearningResource> a owl:Class ;
     rdfs:comment "long video tutorial"@en ;
     rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/LearningResource> .
+
+<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SemanticLanguage> a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SemanticLayer>,
+        owl:NamedIndividual .
 
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SemanticMethodology> a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SemanticLayer>,
         owl:NamedIndividual .
