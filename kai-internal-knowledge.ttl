@@ -1,3 +1,4 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix ns1: <file:///Users/20002797/Documents/kai/> .
 @prefix ns2: <file:///Users/20014538/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -139,7 +140,8 @@ ns2:hasExpertise a owl:ObjectProperty ;
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/HumanInterface> a owl:Class ;
     rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/KnowledgeExposition> .
 
-<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/People> a owl:Class .
+<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/People> a owl:Class ;
+    rdfs:subClassOf foaf:Person .
 
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SemanticLanguage> a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SemanticLayer>,
         owl:NamedIndividual .
@@ -152,6 +154,8 @@ ns2:hasExpertise a owl:ObjectProperty ;
 
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/VideoLearningResource> a owl:Class ;
     rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/LearningResource> .
+
+foaf:Person a owl:Class .
 
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/ArtificialIntelligence> a owl:Class ;
     rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/TopicOfInterest> .
