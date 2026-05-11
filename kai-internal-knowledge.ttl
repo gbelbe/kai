@@ -173,7 +173,8 @@ ns2:hasExpertise a owl:ObjectProperty ;
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/UX> a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/Digital>,
         owl:NamedIndividual ;
     rdfs:label "User Experience (UX)"@en,
-        "Expérience utilisateur (UX)"@fr .
+        "Expérience utilisateur (UX)"@fr ;
+    schema:image <https://toot> .
 
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/WebsiteLearningResource> a owl:Class ;
     rdfs:label "Website"@en,
@@ -198,10 +199,6 @@ ns2:hasExpertise a owl:ObjectProperty ;
         "Personnes"@fr ;
     rdfs:subClassOf foaf:Person .
 
-foaf:Person a owl:Class ;
-    rdfs:label "Person"@en,
-        "Personne"@fr .
-
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SemanticLanguage> a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SemanticLayer>,
         owl:NamedIndividual ;
     rdfs:label "Semantic Language"@en,
@@ -221,6 +218,10 @@ foaf:Person a owl:Class ;
     rdfs:label "Video"@en,
         "Vidéo"@fr ;
     rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/LearningResource> .
+
+foaf:Person a owl:Class ;
+    rdfs:label "Person"@en,
+        "Personne"@fr .
 
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/ArtificialIntelligence> a owl:Class ;
     rdfs:label "Artificial Intelligence"@en,
@@ -305,3 +306,4 @@ foaf:Person a owl:Class ;
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/TopicOfInterest> a owl:Class ;
     rdfs:label "Topic of Interest"@en,
         "Sujet d'intérêt"@fr .
+
