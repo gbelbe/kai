@@ -174,7 +174,8 @@ ns2:hasExpertise a owl:ObjectProperty ;
         owl:NamedIndividual ;
     rdfs:label "User Experience (UX)"@en,
         "Expérience utilisateur (UX)"@fr ;
-    schema:image <https://toot> .
+    schema:image <https://toot>,
+        <https://toto.com> .
 
 <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/WebsiteLearningResource> a owl:Class ;
     rdfs:label "Website"@en,
