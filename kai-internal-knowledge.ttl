@@ -1,310 +1,313 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix ns1: <file:///Users/20002797/Documents/kai/> .
-@prefix ns2: <file:///Users/20014538/> .
+@prefix kai: <https://example.org/ontology/kai-internal-knowledge/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
 
-ns1:Inria-SemanticWeb-Mooc a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/MoocLearningResource>,
-        owl:NamedIndividual ;
+<https://example.org/ontology/kai-internal-knowledge> a owl:Ontology ;
+    rdfs:label "Kai" .
+
+kai:API a owl:NamedIndividual,
+        kai:SystemInterface ;
+    rdfs:label "API"@en,
+        "API"@fr .
+
+kai:DataScience a owl:NamedIndividual,
+        kai:ArtificialIntelligence ;
+    rdfs:label "Data Science"@en,
+        "Science des données"@fr .
+
+kai:ExternalUseCase a owl:Class ;
+    rdfs:label "External Use Case"@en,
+        "Cas d'usage externe"@fr ;
+    rdfs:subClassOf kai:UseCase .
+
+kai:GraphDatabase a owl:NamedIndividual,
+        kai:TopicOfInterest ;
+    rdfs:label "Graph Database"@en,
+        "Base de données graphe"@fr .
+
+kai:GraphViz a owl:NamedIndividual,
+        kai:HumanInterface ;
+    rdfs:label "Graph Visualization"@en,
+        "Visualisation de graphe"@fr .
+
+kai:Inria-SemanticWeb-Mooc a owl:NamedIndividual,
+        kai:MoocLearningResource ;
     rdfs:label "Inria Semantic Web MOOC"@en,
         "MOOC Web Sémantique de l'Inria"@fr ;
-    ns1:hasTopicOfInterest <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SemanticModeling> ;
+    kai:hasTopicOfInterest kai:SemanticModeling ;
     schema:url <https://www.fun-mooc.fr/fr/cours/web-semantique-et-web-de-donnees/> .
 
-ns1:KnowledgeGraphConference a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/EventLearningResource>,
-        owl:NamedIndividual ;
+kai:InternalUseCase a owl:Class ;
+    rdfs:label "Internal Use Case"@en,
+        "Cas d'usage interne"@fr ;
+    rdfs:subClassOf kai:UseCase .
+
+kai:KnowledgeEngineer a owl:NamedIndividual,
+        kai:Digital ;
+    rdfs:label "Knowledge Engineer"@en,
+        "Ingénieur en connaissance"@fr ;
+    kai:hasExpertise kai:Ontology,
+        kai:SemanticMethodology,
+        kai:SemanticModeling,
+        kai:Taxonomy .
+
+kai:KnowledgeGraphConference a owl:NamedIndividual,
+        kai:EventLearningResource ;
     rdfs:label "Knowledge Graph Conference"@en,
         "Conférence Knowledge Graph"@fr ;
     rdfs:comment ""@en .
 
-ns1:LearningSparql a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/BookLearningResource>,
-        owl:NamedIndividual ;
-    rdfs:label "Learning SPARQL"@en,
-        "Apprendre SPARQL"@fr ;
-    ns1:hasTopicOfInterest <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SemanticLanguage> ;
-    schema:url <https://www.learningsparql.com/> .
-
-ns1:Practical-Knowledge-Modeling a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/MoocLearningResource>,
-        owl:NamedIndividual ;
-    rdfs:label "Practical Knowledge Modeling"@en,
-        "Modélisation pratique des connaissances"@fr ;
-    ns1:hasTopicOfInterest <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SemanticModeling> ;
-    schema:url <https://www.udemy.com/course/practical-knowledge-modelling/> .
-
-ns1:SemanticDataEurope a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/EventLearningResource>,
-        owl:NamedIndividual ;
-    rdfs:label "Semantic Data Europe"@en,
-        "Semantic Data Europe"@fr ;
-    ns1:hasTopicOfInterest <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/Ontology>,
-        <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SemanticModeling> .
-
-ns1:TaxonomyBootCamp a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/EventLearningResource>,
-        owl:NamedIndividual ;
-    rdfs:label "Taxonomy Boot Camp"@en,
-        "Taxonomy Boot Camp"@fr ;
-    ns1:hasTopicOfInterest <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/Taxonomy> .
-
-ns1:gaetan a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/People>,
-        owl:NamedIndividual ;
-    rdfs:label "Gaëtan"@en,
-        "Gaëtan"@fr .
-
-ns1:hasTopicOfInterest a owl:ObjectProperty ;
-    rdfs:label "has topic of interest"@en,
-        "a pour sujet d'intérêt"@fr ;
-    rdfs:domain <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/LearningResource> ;
-    rdfs:range <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/TopicOfInterest> .
-
-ns2:ExternalUseCase a owl:Class ;
-    rdfs:label "External Use Case"@en,
-        "Cas d'usage externe"@fr ;
-    rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/UseCase> .
-
-ns2:InternalUseCase a owl:Class ;
-    rdfs:label "Internal Use Case"@en,
-        "Cas d'usage interne"@fr ;
-    rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/UseCase> .
-
-ns2:hasExpertise a owl:ObjectProperty ;
-    rdfs:label "has expertise"@en,
-        "a une expertise en"@fr ;
-    rdfs:domain <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/Function> ;
-    rdfs:range <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/TopicOfInterest> .
-
-<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/API> a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SystemInterface>,
-        owl:NamedIndividual ;
-    rdfs:label "API"@en,
-        "API"@fr .
-
-<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/BookLearningResource/TheAccidentalTaxonomist> a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/BookLearningResource>,
-        owl:NamedIndividual ;
-    rdfs:label "The Accidental Taxonomist"@en,
-        "L'Accidentel Taxonomiste"@fr ;
-    ns1:hasTopicOfInterest <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SemanticModeling>,
-        <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/Taxonomy> .
-
-<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/BookLearningResource/TheKnowledgeGraphCookbook> a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/BookLearningResource>,
-        owl:NamedIndividual ;
-    rdfs:label "The Knowledge Graph Cookbook"@en,
-        "Le Livre de recettes du graphe de connaissances"@fr ;
-    ns1:hasTopicOfInterest <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SemanticGovernance>,
-        <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SemanticModeling>,
-        <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/Taxonomy> .
-
-<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/DataScience> a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/ArtificialIntelligence>,
-        owl:NamedIndividual ;
-    rdfs:label "Data Science"@en,
-        "Science des données"@fr .
-
-<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/GraphDatabase> a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/TopicOfInterest>,
-        owl:NamedIndividual ;
-    rdfs:label "Graph Database"@en,
-        "Base de données graphe"@fr .
-
-<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/GraphViz> a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/HumanInterface>,
-        owl:NamedIndividual ;
-    rdfs:label "Graph Visualization"@en,
-        "Visualisation de graphe"@fr .
-
-<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/KnowledgeEngineer> a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/Digital>,
-        owl:NamedIndividual ;
-    rdfs:label "Knowledge Engineer"@en,
-        "Ingénieur en connaissance"@fr ;
-    ns2:hasExpertise <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/Ontology>,
-        <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SemanticMethodology>,
-        <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SemanticModeling>,
-        <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/Taxonomy> .
-
-<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/LargeLanguageModel> a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/ArtificialIntelligence>,
-        owl:NamedIndividual ;
+kai:LargeLanguageModel a owl:NamedIndividual,
+        kai:ArtificialIntelligence ;
     rdfs:label "Large Language Model"@en,
         "Grand modèle de langage"@fr .
 
-<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/MCP> a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SystemInterface>,
-        owl:NamedIndividual ;
+kai:LearningSparql a owl:NamedIndividual,
+        kai:BookLearningResource ;
+    rdfs:label "Learning SPARQL"@en,
+        "Apprendre SPARQL"@fr ;
+    kai:hasTopicOfInterest kai:SemanticLanguage ;
+    schema:url <https://www.learningsparql.com/> .
+
+kai:LinkedDataPatterns a owl:NamedIndividual,
+        kai:BookLearningResource ;
+    schema:url <https://patterns.dataincubator.org/book/linked-data-patterns.pdf> .
+
+kai:MCP a owl:NamedIndividual,
+        kai:SystemInterface ;
     rdfs:label "Model Context Protocol"@en,
         "Protocole de contexte de modèle"@fr .
 
-<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/ScientificPaper> a owl:Class ;
+kai:OntologyDevlopment101 a owl:NamedIndividual,
+        kai:TutorialPaper ;
+    rdfs:label "Ontology Development 101: A Guide to Creating Your First Ontology"@en,
+        "Développement d'ontologie 101 : Guide pour créer votre première ontologie"@fr ;
+    kai:hasTopicOfInterest kai:Ontology,
+        kai:SemanticModeling,
+        kai:Taxonomy ;
+    schema:url <https://protege.stanford.edu/publications/ontology_development/ontology101.pdf> .
+
+kai:Practical-Knowledge-Modeling a owl:NamedIndividual,
+        kai:MoocLearningResource ;
+    rdfs:label "Practical Knowledge Modeling"@en,
+        "Modélisation pratique des connaissances"@fr ;
+    kai:hasTopicOfInterest kai:SemanticModeling ;
+    schema:url <https://www.udemy.com/course/practical-knowledge-modelling/> .
+
+kai:ScientificPaper a owl:Class ;
     rdfs:label "Scientific Paper"@en,
         "Article scientifique"@fr ;
     rdfs:comment "scientific report"@en ;
-    rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/PaperLearningResource> .
+    rdfs:subClassOf kai:PaperLearningResource .
 
-<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/Semantic_Modeling_for_Data> a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/BookLearningResource>,
-        owl:NamedIndividual ;
+kai:SemanticDataEurope a owl:NamedIndividual,
+        kai:EventLearningResource ;
+    rdfs:label "Semantic Data Europe"@en,
+        "Semantic Data Europe"@fr ;
+    kai:hasTopicOfInterest kai:Ontology,
+        kai:SemanticModeling .
+
+kai:Semantic_Modeling_for_Data a owl:NamedIndividual,
+        kai:BookLearningResource ;
     rdfs:label "Semantic Modeling for Data"@en,
         "Modélisation sémantique des données"@fr ;
-    ns1:hasTopicOfInterest <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SemanticModeling> .
+    kai:hasTopicOfInterest kai:SemanticModeling .
 
-<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SoftwareArchitect> a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/Digital>,
-        owl:NamedIndividual ;
+kai:SoftwareArchitect a owl:NamedIndividual,
+        kai:Digital ;
     rdfs:label "Software EnterpriseArchitect"@en,
         "Architecte logiciel"@fr .
 
-<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SoftwareArchitecture> a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/TopicOfInterest>,
-        owl:NamedIndividual ;
+kai:SoftwareArchitecture a owl:NamedIndividual,
+        kai:TopicOfInterest ;
     rdfs:label "Software Architecture"@en,
         "Architecture logicielle"@fr .
 
-<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SubjectMatterExpert> a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/Business>,
-        owl:NamedIndividual ;
+kai:SubjectMatterExpert a owl:NamedIndividual,
+        kai:Business ;
     rdfs:label "Subject Matter Expert"@en,
         "Expert métier"@fr ;
-    ns2:hasExpertise <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SemanticGovernance> .
+    kai:hasExpertise kai:SemanticGovernance .
 
-<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/The_Missing_Layer:_Why_Semantics_and_Knowledge_Graphs_Are_Essential_for_AI-Ready_Data_Systems> a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/VideoLearningResource>,
-        owl:NamedIndividual ;
+kai:TaxonomyBootCamp a owl:NamedIndividual,
+        kai:EventLearningResource ;
+    rdfs:label "Taxonomy Boot Camp"@en,
+        "Taxonomy Boot Camp"@fr ;
+    kai:hasTopicOfInterest kai:Taxonomy .
+
+kai:TheAccidentalTaxonomist a owl:NamedIndividual,
+        kai:BookLearningResource ;
+    rdfs:label "The Accidental Taxonomist"@en,
+        "L'Accidentel Taxonomiste"@fr ;
+    kai:hasTopicOfInterest kai:SemanticModeling,
+        kai:Taxonomy .
+
+kai:TheKnowledgeGraphCookbook a owl:NamedIndividual,
+        kai:BookLearningResource ;
+    rdfs:label "The Knowledge Graph Cookbook"@en,
+        "Le Livre de recettes du graphe de connaissances"@fr ;
+    kai:hasTopicOfInterest kai:SemanticGovernance,
+        kai:SemanticModeling,
+        kai:Taxonomy .
+
+kai:The_Missing_Layer a owl:NamedIndividual,
+        kai:VideoLearningResource ;
     rdfs:label "The Missing Layer: Why Semantics and Knowledge Graphs Are Essential for AI-Ready Data Systems"@en,
         "La couche manquante : Pourquoi la sémantique et les graphes de connaissances sont essentiels pour les systèmes de données prêts pour l'IA"@fr ;
-    ns1:hasTopicOfInterest <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/Ontology> ;
-    rdfs:comment "https://www.youtube.com/watch?v=-udYsiECe3o" .
+    rdfs:comment "https://www.youtube.com/watch?v=-udYsiECe3o" ;
+    kai:hasTopicOfInterest kai:Ontology .
 
-<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/TutorialPaper/OntologyDevlopment101> a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/TutorialPaper>,
-        owl:NamedIndividual ;
-    rdfs:label "Ontology Development 101: A Guide to Creating Your First Ontology"@en,
-        "Développement d'ontologie 101 : Guide pour créer votre première ontologie"@fr ;
-    ns1:hasTopicOfInterest <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/Ontology>,
-        <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SemanticModeling>,
-        <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/Taxonomy> ;
-    schema:url <https://protege.stanford.edu/publications/ontology_development/ontology101.pdf> .
-
-<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/UX> a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/Digital>,
-        owl:NamedIndividual ;
+kai:UX a owl:NamedIndividual,
+        kai:Digital ;
     rdfs:label "User Experience (UX)"@en,
         "Expérience utilisateur (UX)"@fr ;
     schema:image <https://toot>,
         <https://toto.com> .
 
-<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/WebsiteLearningResource> a owl:Class ;
+kai:WebsiteLearningResource a owl:Class ;
     rdfs:label "Website"@en,
         "Site web"@fr ;
-    rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/LearningResource> .
+    rdfs:subClassOf kai:LearningResource .
 
-<https://example.org/ontology/kai-internal-knowledge> a owl:Ontology ;
-    rdfs:label "Kai" .
+kai:gaetan a owl:NamedIndividual,
+        kai:People ;
+    rdfs:label "Gaëtan"@en,
+        "Gaëtan"@fr .
 
-<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/Business> a owl:Class ;
-    rdfs:label "Business Function"@en,
-        "Fonction métier"@fr ;
-    rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/Function> .
+kai:hasExpertise a owl:ObjectProperty ;
+    rdfs:label "has expertise"@en,
+        "a une expertise en"@fr ;
+    rdfs:domain kai:Function ;
+    rdfs:range kai:TopicOfInterest .
 
-<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/HumanInterface> a owl:Class ;
-    rdfs:label "Human Interface"@en,
-        "Interface humaine"@fr ;
-    rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/KnowledgeExposition> .
-
-<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/People> a owl:Class ;
-    rdfs:label "People"@en,
-        "Personnes"@fr ;
-    rdfs:subClassOf foaf:Person .
-
-<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SemanticLanguage> a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SemanticLayer>,
-        owl:NamedIndividual ;
-    rdfs:label "Semantic Language"@en,
-        "Langage sémantique"@fr .
-
-<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SemanticMethodology> a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SemanticLayer>,
-        owl:NamedIndividual ;
-    rdfs:label "Semantic Methodology"@en,
-        "Méthodologie sémantique"@fr .
-
-<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/TutorialPaper> a owl:Class ;
-    rdfs:label "Tutorial Paper"@en,
-        "Article tutoriel"@fr ;
-    rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/PaperLearningResource> .
-
-<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/VideoLearningResource> a owl:Class ;
-    rdfs:label "Video"@en,
-        "Vidéo"@fr ;
-    rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/LearningResource> .
+kai:hasTopicOfInterest a owl:ObjectProperty ;
+    rdfs:label "has topic of interest"@en,
+        "a pour sujet d'intérêt"@fr ;
+    rdfs:domain kai:LearningResource ;
+    rdfs:range kai:TopicOfInterest .
 
 foaf:Person a owl:Class ;
     rdfs:label "Person"@en,
         "Personne"@fr .
 
-<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/ArtificialIntelligence> a owl:Class ;
+kai:Business a owl:Class ;
+    rdfs:label "Business Function"@en,
+        "Fonction métier"@fr ;
+    rdfs:subClassOf kai:Function .
+
+kai:HumanInterface a owl:Class ;
+    rdfs:label "Human Interface"@en,
+        "Interface humaine"@fr ;
+    rdfs:subClassOf kai:KnowledgeExposition .
+
+kai:People a owl:Class ;
+    rdfs:label "People"@en,
+        "Personnes"@fr ;
+    rdfs:subClassOf foaf:Person .
+
+kai:SemanticLanguage a owl:NamedIndividual,
+        kai:SemanticLayer ;
+    rdfs:label "Semantic Language"@en,
+        "Langage sémantique"@fr .
+
+kai:SemanticMethodology a owl:NamedIndividual,
+        kai:SemanticLayer ;
+    rdfs:label "Semantic Methodology"@en,
+        "Méthodologie sémantique"@fr .
+
+kai:TutorialPaper a owl:Class ;
+    rdfs:label "Tutorial Paper"@en,
+        "Article tutoriel"@fr ;
+    rdfs:subClassOf kai:PaperLearningResource .
+
+kai:VideoLearningResource a owl:Class ;
+    rdfs:label "Video"@en,
+        "Vidéo"@fr ;
+    rdfs:subClassOf kai:LearningResource .
+
+kai:ArtificialIntelligence a owl:Class ;
     rdfs:label "Artificial Intelligence"@en,
         "Intelligence artificielle"@fr ;
-    rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/TopicOfInterest> .
+    rdfs:subClassOf kai:TopicOfInterest .
 
-<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/KnowledgeExposition> a owl:Class ;
+kai:KnowledgeExposition a owl:Class ;
     rdfs:label "Knowledge Exposition"@en,
         "Exposition de connaissance"@fr ;
-    rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/TopicOfInterest> .
+    rdfs:subClassOf kai:TopicOfInterest .
 
-<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/MoocLearningResource> a owl:Class ;
+kai:MoocLearningResource a owl:Class ;
     rdfs:label "MOOC"@en,
         "MOOC"@fr ;
     rdfs:comment "long video tutorial"@en ;
-    rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/LearningResource> .
+    rdfs:subClassOf kai:LearningResource .
 
-<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/PaperLearningResource> a owl:Class ;
+kai:PaperLearningResource a owl:Class ;
     rdfs:label "Paper"@en,
         "Article"@fr ;
-    rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/LearningResource> .
+    rdfs:subClassOf kai:LearningResource .
 
-<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SemanticGovernance> a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SemanticLayer>,
-        owl:NamedIndividual ;
+kai:SemanticGovernance a owl:NamedIndividual,
+        kai:SemanticLayer ;
     rdfs:label "Semantic Governance"@en,
         "Gouvernance sémantique"@fr .
 
-<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SystemInterface> a owl:Class ;
+kai:SystemInterface a owl:Class ;
     rdfs:label "System Interface"@en,
         "Interface système"@fr ;
-    rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/KnowledgeExposition> .
+    rdfs:subClassOf kai:KnowledgeExposition .
 
-<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/UseCase> a owl:Class ;
+kai:UseCase a owl:Class ;
     rdfs:label "Use Case"@en,
         "Cas d'usage"@fr ;
-    rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/TopicOfInterest> .
+    rdfs:subClassOf kai:TopicOfInterest .
 
-<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/Digital> a owl:Class ;
+kai:Digital a owl:Class ;
     rdfs:label "Digital Function"@en,
         "Fonction numérique"@fr ;
-    rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/Function> .
+    rdfs:subClassOf kai:Function .
 
-<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/EventLearningResource> a owl:Class ;
+kai:EventLearningResource a owl:Class ;
     rdfs:label "Event"@en,
         "Événement"@fr ;
-    rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/LearningResource> .
+    rdfs:subClassOf kai:LearningResource .
 
-<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/Function> a owl:Class ;
+kai:Function a owl:Class ;
     rdfs:label "Function"@en,
         "Fonction"@fr .
 
-<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/BookLearningResource> a owl:Class ;
-    rdfs:label "Book"@en,
-        "Livre"@fr ;
-    rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/LearningResource> .
-
-<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/Ontology> a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SemanticLayer>,
-        owl:NamedIndividual ;
+kai:Ontology a owl:NamedIndividual,
+        kai:SemanticLayer ;
     rdfs:label "Ontology"@en,
         "Ontologie"@fr .
 
-<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/Taxonomy> a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SemanticLayer>,
-        owl:NamedIndividual ;
+kai:BookLearningResource a owl:Class ;
+    rdfs:label "Book"@en,
+        "Livre"@fr ;
+    rdfs:subClassOf kai:LearningResource .
+
+kai:Taxonomy a owl:NamedIndividual,
+        kai:SemanticLayer ;
     rdfs:label "Taxonomy"@en,
         "Taxonomie"@fr .
 
-<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SemanticLayer> a owl:Class ;
+kai:SemanticLayer a owl:Class ;
     rdfs:label "Semantic Layer"@en,
         "Couche sémantique"@fr ;
-    rdfs:subClassOf <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/TopicOfInterest> .
+    rdfs:subClassOf kai:TopicOfInterest .
 
-<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/LearningResource> a owl:Class ;
+kai:LearningResource a owl:Class ;
     rdfs:label "Learning Resource"@en,
         "Ressource d'apprentissage"@fr ;
     rdfs:comment "All resources needed for learning"@en .
 
-<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SemanticModeling> a <http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/SemanticLayer>,
-        owl:NamedIndividual ;
+kai:SemanticModeling a owl:NamedIndividual,
+        kai:SemanticLayer ;
     rdfs:label "Semantic Modeling"@en,
         "Modélisation sémantique"@fr .
 
-<http://www.semanticweb.org/20014538/ontologies/2026/3/kai-internal-knowledge/TopicOfInterest> a owl:Class ;
+kai:TopicOfInterest a owl:Class ;
     rdfs:label "Topic of Interest"@en,
         "Sujet d'intérêt"@fr .
 
