@@ -171,11 +171,6 @@ kai:WebsiteLearningResource a owl:Class ;
         "Site web"@fr ;
     rdfs:subClassOf kai:LearningResource .
 
-kai:gaetan a owl:NamedIndividual,
-        kai:People ;
-    rdfs:label "Gaëtan"@en,
-        "Gaëtan"@fr .
-
 kai:hasExpertise a owl:ObjectProperty ;
     rdfs:label "has expertise"@en,
         "a une expertise en"@fr ;
@@ -187,6 +182,9 @@ kai:hasTopicOfInterest a owl:ObjectProperty ;
         "a pour sujet d'intérêt"@fr ;
     rdfs:domain kai:LearningResource ;
     rdfs:range kai:TopicOfInterest .
+
+kai:toto a owl:NamedIndividual,
+        kai:People .
 
 foaf:Person a owl:Class ;
     rdfs:label "Person"@en,
