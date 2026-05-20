@@ -89,6 +89,11 @@ kai:OntologyDevlopment101 a owl:NamedIndividual,
         kai:Taxonomy ;
     schema:url <https://protege.stanford.edu/publications/ontology_development/ontology101.pdf> .
 
+kai:People a owl:Class ;
+    rdfs:label "People"@en,
+        "Personnes"@fr ;
+    rdfs:subClassOf foaf:Person .
+
 kai:Practical-Knowledge-Modeling a owl:NamedIndividual,
         kai:MoocLearningResource ;
     rdfs:label "Practical Knowledge Modeling"@en,
@@ -171,15 +176,6 @@ kai:WebsiteLearningResource a owl:Class ;
         "Site web"@fr ;
     rdfs:subClassOf kai:LearningResource .
 
-kai:bilkl a owl:NamedIndividual,
-        kai:People .
-
-kai:billyjoe a owl:NamedIndividual,
-        kai:People .
-
-kai:biloute a owl:NamedIndividual,
-        kai:People .
-
 kai:hasExpertise a owl:ObjectProperty ;
     rdfs:label "has expertise"@en,
         "a une expertise en"@fr ;
@@ -191,18 +187,6 @@ kai:hasTopicOfInterest a owl:ObjectProperty ;
         "a pour sujet d'intérêt"@fr ;
     rdfs:domain kai:LearningResource ;
     rdfs:range kai:TopicOfInterest .
-
-kai:heyhow a owl:NamedIndividual,
-        kai:People .
-
-kai:toto a owl:NamedIndividual,
-        kai:People .
-
-kai:tree a owl:NamedIndividual,
-        kai:People .
-
-kai:tt a owl:NamedIndividual,
-        kai:People .
 
 foaf:Person a owl:Class ;
     rdfs:label "Person"@en,
@@ -312,11 +296,6 @@ kai:LearningResource a owl:Class ;
     rdfs:label "Learning Resource"@en,
         "Ressource d'apprentissage"@fr ;
     rdfs:comment "All resources needed for learning"@en .
-
-kai:People a owl:Class ;
-    rdfs:label "People"@en,
-        "Personnes"@fr ;
-    rdfs:subClassOf foaf:Person .
 
 kai:SemanticModeling a owl:NamedIndividual,
         kai:SemanticLayer ;
