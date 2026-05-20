@@ -171,6 +171,12 @@ kai:WebsiteLearningResource a owl:Class ;
         "Site web"@fr ;
     rdfs:subClassOf kai:LearningResource .
 
+kai:bilkl a owl:NamedIndividual,
+        kai:People .
+
+kai:biloute a owl:NamedIndividual,
+        kai:People .
+
 kai:hasExpertise a owl:ObjectProperty ;
     rdfs:label "has expertise"@en,
         "a une expertise en"@fr ;
@@ -199,11 +205,6 @@ kai:HumanInterface a owl:Class ;
     rdfs:label "Human Interface"@en,
         "Interface humaine"@fr ;
     rdfs:subClassOf kai:KnowledgeExposition .
-
-kai:People a owl:Class ;
-    rdfs:label "People"@en,
-        "Personnes"@fr ;
-    rdfs:subClassOf foaf:Person .
 
 kai:SemanticLanguage a owl:NamedIndividual,
         kai:SemanticLayer ;
@@ -274,6 +275,11 @@ kai:EventLearningResource a owl:Class ;
 kai:Function a owl:Class ;
     rdfs:label "Function"@en,
         "Fonction"@fr .
+
+kai:People a owl:Class ;
+    rdfs:label "People"@en,
+        "Personnes"@fr ;
+    rdfs:subClassOf foaf:Person .
 
 kai:Ontology a owl:NamedIndividual,
         kai:SemanticLayer ;
