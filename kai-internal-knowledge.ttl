@@ -7,6 +7,42 @@
 <https://example.org/ontology/kai-internal-knowledge> a owl:Ontology ;
     rdfs:label "Kai" .
 
+<https://example.org/ontology/kai-internal-knowledge#VOWL_Kai> a owl:NamedIndividual,
+        kai:People ;
+    rdfs:label "VOWL — Kai"@en .
+
+<https://example.org/ontology/kai-internal-knowledge#gaetan> a owl:NamedIndividual,
+        kai:People ;
+    rdfs:label "gaetan"@en .
+
+<https://example.org/ontology/kai-internal-knowledge#hello_world> a owl:NamedIndividual,
+        kai:People ;
+    rdfs:label "hello-world"@en .
+
+<https://example.org/ontology/kai-internal-knowledge#hey_jude> a owl:NamedIndividual,
+        kai:People ;
+    rdfs:label "hey jude"@en .
+
+<https://example.org/ontology/kai-internal-knowledge#last_test> a owl:NamedIndividual,
+        kai:People ;
+    rdfs:label "last_test"@en .
+
+<https://example.org/ontology/kai-internal-knowledge#new_test> a owl:NamedIndividual,
+        kai:People ;
+    rdfs:label "new-test"@en .
+
+<https://example.org/ontology/kai-internal-knowledge#toto> a owl:NamedIndividual,
+        kai:People ;
+    rdfs:label "toto"@en .
+
+<https://example.org/ontology/kai-internal-knowledge#toto_1> a owl:NamedIndividual,
+        kai:People ;
+    rdfs:label "toto"@en .
+
+<https://example.org/ontology/kai-internal-knowledge#yyyy> a owl:NamedIndividual,
+        kai:People ;
+    rdfs:label "yyyy"@en .
+
 kai:API a owl:NamedIndividual,
         kai:SystemInterface ;
     rdfs:label "API"@en,
@@ -88,11 +124,6 @@ kai:OntologyDevlopment101 a owl:NamedIndividual,
         kai:SemanticModeling,
         kai:Taxonomy ;
     schema:url <https://protege.stanford.edu/publications/ontology_development/ontology101.pdf> .
-
-kai:People a owl:Class ;
-    rdfs:label "People"@en,
-        "Personnes"@fr ;
-    rdfs:subClassOf foaf:Person .
 
 kai:Practical-Knowledge-Modeling a owl:NamedIndividual,
         kai:MoocLearningResource ;
@@ -187,6 +218,10 @@ kai:hasTopicOfInterest a owl:ObjectProperty ;
         "a pour sujet d'intérêt"@fr ;
     rdfs:domain kai:LearningResource ;
     rdfs:range kai:TopicOfInterest .
+
+kai:toto a owl:NamedIndividual,
+        kai:People ;
+    rdfs:label "toto"@en .
 
 foaf:Person a owl:Class ;
     rdfs:label "Person"@en,
@@ -305,4 +340,9 @@ kai:SemanticModeling a owl:NamedIndividual,
 kai:TopicOfInterest a owl:Class ;
     rdfs:label "Topic of Interest"@en,
         "Sujet d'intérêt"@fr .
+
+kai:People a owl:Class ;
+    rdfs:label "People"@en,
+        "Personnes"@fr ;
+    rdfs:subClassOf foaf:Person .
 
