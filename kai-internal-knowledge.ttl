@@ -7,10 +7,6 @@
 <https://example.org/ontology/kai-internal-knowledge> a owl:Ontology ;
     rdfs:label "Kai" .
 
-<https://example.org/ontology/kai-internal-knowledge#Notes_PDP_Team_exe_Co_Op_Google_Docs> a owl:NamedIndividual,
-        kai:People ;
-    rdfs:label "Notes - PDP Team exe & Co-Op - Google Docs"@en .
-
 kai:API a owl:NamedIndividual,
         kai:SystemInterface ;
     rdfs:label "API"@en,
@@ -103,6 +99,11 @@ kai:OntologyDevlopment101 a owl:NamedIndividual,
         kai:SemanticModeling,
         kai:Taxonomy ;
     schema:url <https://protege.stanford.edu/publications/ontology_development/ontology101.pdf> .
+
+kai:People a owl:Class ;
+    rdfs:label "People"@en,
+        "Personnes"@fr ;
+    rdfs:subClassOf foaf:Person .
 
 kai:Practical-Knowledge-Modeling a owl:NamedIndividual,
         kai:MoocLearningResource ;
@@ -205,11 +206,6 @@ kai:HumanInterface a owl:Class ;
     rdfs:label "Human Interface"@en,
         "Interface humaine"@fr ;
     rdfs:subClassOf kai:KnowledgeExposition .
-
-kai:People a owl:Class ;
-    rdfs:label "People"@en,
-        "Personnes"@fr ;
-    rdfs:subClassOf foaf:Person .
 
 kai:ScientificPaper a owl:Class ;
     rdfs:label "Scientific Paper"@en,
