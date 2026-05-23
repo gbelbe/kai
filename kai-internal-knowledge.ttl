@@ -7,46 +7,20 @@
 <https://example.org/ontology/kai-internal-knowledge> a owl:Ontology ;
     rdfs:label "Kai" .
 
-<https://example.org/ontology/kai-internal-knowledge#VOWL_Kai> a owl:NamedIndividual,
+<https://example.org/ontology/kai-internal-knowledge#Notes_PDP_Team_exe_Co_Op_Google_Docs> a owl:NamedIndividual,
         kai:People ;
-    rdfs:label "VOWL — Kai"@en .
-
-<https://example.org/ontology/kai-internal-knowledge#gaetan> a owl:NamedIndividual,
-        kai:People ;
-    rdfs:label "gaetan"@en .
-
-<https://example.org/ontology/kai-internal-knowledge#hello_world> a owl:NamedIndividual,
-        kai:People ;
-    rdfs:label "hello-world"@en .
-
-<https://example.org/ontology/kai-internal-knowledge#hey_jude> a owl:NamedIndividual,
-        kai:People ;
-    rdfs:label "hey jude"@en .
-
-<https://example.org/ontology/kai-internal-knowledge#last_test> a owl:NamedIndividual,
-        kai:People ;
-    rdfs:label "last_test"@en .
-
-<https://example.org/ontology/kai-internal-knowledge#new_test> a owl:NamedIndividual,
-        kai:People ;
-    rdfs:label "new-test"@en .
-
-<https://example.org/ontology/kai-internal-knowledge#toto> a owl:NamedIndividual,
-        kai:People ;
-    rdfs:label "toto"@en .
-
-<https://example.org/ontology/kai-internal-knowledge#toto_1> a owl:NamedIndividual,
-        kai:People ;
-    rdfs:label "toto"@en .
-
-<https://example.org/ontology/kai-internal-knowledge#yyyy> a owl:NamedIndividual,
-        kai:People ;
-    rdfs:label "yyyy"@en .
+    rdfs:label "Notes - PDP Team exe & Co-Op - Google Docs"@en .
 
 kai:API a owl:NamedIndividual,
         kai:SystemInterface ;
     rdfs:label "API"@en,
         "API"@fr .
+
+kai:CommonModelingPitfalls a owl:NamedIndividual,
+        kai:TutorialPaper ;
+    rdfs:label "Common Modeling Pitfalls"@en ;
+    kai:hasTopicOfInterest kai:SemanticModeling ;
+    schema:url <http://www.meteck.org/files/PitfallsChapter.pdf> .
 
 kai:DataScience a owl:NamedIndividual,
         kai:ArtificialIntelligence ;
@@ -116,6 +90,11 @@ kai:MCP a owl:NamedIndividual,
     rdfs:label "Model Context Protocol"@en,
         "Protocole de contexte de modèle"@fr .
 
+kai:OOPS_onto_pitfall_scanner a owl:NamedIndividual,
+        kai:ScientificPaper ;
+    kai:hasTopicOfInterest kai:SemanticModeling ;
+    schema:url <https://www.semantic-web-journal.net/system/files/swj989.pdf> .
+
 kai:OntologyDevlopment101 a owl:NamedIndividual,
         kai:TutorialPaper ;
     rdfs:label "Ontology Development 101: A Guide to Creating Your First Ontology"@en,
@@ -131,12 +110,6 @@ kai:Practical-Knowledge-Modeling a owl:NamedIndividual,
         "Modélisation pratique des connaissances"@fr ;
     kai:hasTopicOfInterest kai:SemanticModeling ;
     schema:url <https://www.udemy.com/course/practical-knowledge-modelling/> .
-
-kai:ScientificPaper a owl:Class ;
-    rdfs:label "Scientific Paper"@en,
-        "Article scientifique"@fr ;
-    rdfs:comment "scientific report"@en ;
-    rdfs:subClassOf kai:PaperLearningResource .
 
 kai:SemanticDataEurope a owl:NamedIndividual,
         kai:EventLearningResource ;
@@ -219,10 +192,6 @@ kai:hasTopicOfInterest a owl:ObjectProperty ;
     rdfs:domain kai:LearningResource ;
     rdfs:range kai:TopicOfInterest .
 
-kai:toto a owl:NamedIndividual,
-        kai:People ;
-    rdfs:label "toto"@en .
-
 foaf:Person a owl:Class ;
     rdfs:label "Person"@en,
         "Personne"@fr .
@@ -237,6 +206,17 @@ kai:HumanInterface a owl:Class ;
         "Interface humaine"@fr ;
     rdfs:subClassOf kai:KnowledgeExposition .
 
+kai:People a owl:Class ;
+    rdfs:label "People"@en,
+        "Personnes"@fr ;
+    rdfs:subClassOf foaf:Person .
+
+kai:ScientificPaper a owl:Class ;
+    rdfs:label "Scientific Paper"@en,
+        "Article scientifique"@fr ;
+    rdfs:comment "scientific report"@en ;
+    rdfs:subClassOf kai:PaperLearningResource .
+
 kai:SemanticLanguage a owl:NamedIndividual,
         kai:SemanticLayer ;
     rdfs:label "Semantic Language"@en,
@@ -246,11 +226,6 @@ kai:SemanticMethodology a owl:NamedIndividual,
         kai:SemanticLayer ;
     rdfs:label "Semantic Methodology"@en,
         "Méthodologie sémantique"@fr .
-
-kai:TutorialPaper a owl:Class ;
-    rdfs:label "Tutorial Paper"@en,
-        "Article tutoriel"@fr ;
-    rdfs:subClassOf kai:PaperLearningResource .
 
 kai:VideoLearningResource a owl:Class ;
     rdfs:label "Video"@en,
@@ -287,6 +262,11 @@ kai:SystemInterface a owl:Class ;
     rdfs:label "System Interface"@en,
         "Interface système"@fr ;
     rdfs:subClassOf kai:KnowledgeExposition .
+
+kai:TutorialPaper a owl:Class ;
+    rdfs:label "Tutorial Paper"@en,
+        "Article tutoriel"@fr ;
+    rdfs:subClassOf kai:PaperLearningResource .
 
 kai:UseCase a owl:Class ;
     rdfs:label "Use Case"@en,
@@ -332,17 +312,12 @@ kai:LearningResource a owl:Class ;
         "Ressource d'apprentissage"@fr ;
     rdfs:comment "All resources needed for learning"@en .
 
-kai:SemanticModeling a owl:NamedIndividual,
-        kai:SemanticLayer ;
-    rdfs:label "Semantic Modeling"@en,
-        "Modélisation sémantique"@fr .
-
 kai:TopicOfInterest a owl:Class ;
     rdfs:label "Topic of Interest"@en,
         "Sujet d'intérêt"@fr .
 
-kai:People a owl:Class ;
-    rdfs:label "People"@en,
-        "Personnes"@fr ;
-    rdfs:subClassOf foaf:Person .
+kai:SemanticModeling a owl:NamedIndividual,
+        kai:SemanticLayer ;
+    rdfs:label "Semantic Modeling"@en,
+        "Modélisation sémantique"@fr .
 
