@@ -100,11 +100,6 @@ kai:OntologyDevlopment101 a owl:NamedIndividual,
         kai:Taxonomy ;
     schema:url <https://protege.stanford.edu/publications/ontology_development/ontology101.pdf> .
 
-kai:People a owl:Class ;
-    rdfs:label "People"@en,
-        "Personnes"@fr ;
-    rdfs:subClassOf foaf:Person .
-
 kai:Practical-Knowledge-Modeling a owl:NamedIndividual,
         kai:MoocLearningResource ;
     rdfs:label "Practical Knowledge Modeling"@en,
@@ -193,6 +188,9 @@ kai:hasTopicOfInterest a owl:ObjectProperty ;
     rdfs:domain kai:LearningResource ;
     rdfs:range kai:TopicOfInterest .
 
+kai:toto a owl:NamedIndividual,
+        kai:People .
+
 foaf:Person a owl:Class ;
     rdfs:label "Person"@en,
         "Personne"@fr .
@@ -206,6 +204,11 @@ kai:HumanInterface a owl:Class ;
     rdfs:label "Human Interface"@en,
         "Interface humaine"@fr ;
     rdfs:subClassOf kai:KnowledgeExposition .
+
+kai:People a owl:Class ;
+    rdfs:label "People"@en,
+        "Personnes"@fr ;
+    rdfs:subClassOf foaf:Person .
 
 kai:ScientificPaper a owl:Class ;
     rdfs:label "Scientific Paper"@en,
