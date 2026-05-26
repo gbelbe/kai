@@ -18,11 +18,6 @@ kai:CommonModelingPitfalls a owl:NamedIndividual,
     kai:hasTopicOfInterest kai:SemanticModeling ;
     schema:url <http://www.meteck.org/files/PitfallsChapter.pdf> .
 
-kai:DataScience a owl:NamedIndividual,
-        kai:ArtificialIntelligence ;
-    rdfs:label "Data Science"@en,
-        "Science des données"@fr .
-
 kai:ExternalUseCase a owl:Class ;
     rdfs:label "External Use Case"@en,
         "Cas d'usage externe"@fr ;
@@ -64,11 +59,6 @@ kai:KnowledgeGraphConference a owl:NamedIndividual,
     rdfs:label "Knowledge Graph Conference"@en,
         "Conférence Knowledge Graph"@fr ;
     rdfs:comment ""@en .
-
-kai:LargeLanguageModel a owl:NamedIndividual,
-        kai:ArtificialIntelligence ;
-    rdfs:label "Large Language Model"@en,
-        "Grand modèle de langage"@fr .
 
 kai:LearningSparql a owl:NamedIndividual,
         kai:BookLearningResource ;
@@ -119,6 +109,8 @@ kai:Semantic_Modeling_for_Data a owl:NamedIndividual,
     rdfs:label "Semantic Modeling for Data"@en,
         "Modélisation sémantique des données"@fr ;
     kai:hasTopicOfInterest kai:SemanticModeling .
+
+kai:Software a owl:Class .
 
 kai:SoftwareArchitect a owl:NamedIndividual,
         kai:Digital ;
@@ -237,11 +229,6 @@ kai:VideoLearningResource a owl:Class ;
         "Vidéo"@fr ;
     rdfs:subClassOf kai:LearningResource .
 
-kai:ArtificialIntelligence a owl:Class ;
-    rdfs:label "Artificial Intelligence"@en,
-        "Intelligence artificielle"@fr ;
-    rdfs:subClassOf kai:TopicOfInterest .
-
 kai:KnowledgeExposition a owl:Class ;
     rdfs:label "Knowledge Exposition"@en,
         "Exposition de connaissance"@fr ;
@@ -270,8 +257,7 @@ kai:SystemInterface a owl:Class ;
 
 kai:UseCase a owl:Class ;
     rdfs:label "Use Case"@en,
-        "Cas d'usage"@fr ;
-    rdfs:subClassOf kai:TopicOfInterest .
+        "Cas d'usage"@fr .
 
 kai:Digital a owl:Class ;
     rdfs:label "Digital Function"@en,
@@ -312,14 +298,14 @@ kai:SemanticLayer a owl:Class ;
         "Couche sémantique"@fr ;
     rdfs:subClassOf kai:TopicOfInterest .
 
+kai:TopicOfInterest a owl:Class ;
+    rdfs:label "Topic of Interest"@en,
+        "Sujet d'intérêt"@fr .
+
 kai:LearningResource a owl:Class ;
     rdfs:label "Learning Resource"@en,
         "Ressource d'apprentissage"@fr ;
     rdfs:comment "All resources needed for learning"@en .
-
-kai:TopicOfInterest a owl:Class ;
-    rdfs:label "Topic of Interest"@en,
-        "Sujet d'intérêt"@fr .
 
 kai:SemanticModeling a owl:NamedIndividual,
         kai:SemanticLayer ;
