@@ -125,11 +125,6 @@ kai:SoftwareArchitect a owl:NamedIndividual,
     rdfs:label "Software EnterpriseArchitect"@en,
         "Architecte logiciel"@fr .
 
-kai:SoftwareArchitecture a owl:NamedIndividual,
-        kai:TopicOfInterest ;
-    rdfs:label "Software Architecture"@en,
-        "Architecture logicielle"@fr .
-
 kai:SubjectMatterExpert a owl:NamedIndividual,
         kai:Business ;
     rdfs:label "Subject Matter Expert"@en,
@@ -163,6 +158,12 @@ kai:The_Missing_Layer a owl:NamedIndividual,
         "La couche manquante : Pourquoi la sémantique et les graphes de connaissances sont essentiels pour les systèmes de données prêts pour l'IA"@fr ;
     rdfs:comment "https://www.youtube.com/watch?v=-udYsiECe3o" ;
     kai:hasTopicOfInterest kai:Ontology .
+
+kai:URI_Standards_For_Ontologies a owl:NamedIndividual,
+        kai:TutorialPaper ;
+    kai:hasTopicOfInterest kai:SemanticModeling,
+        kai:SoftwareArchitecture ;
+    schema:url <https://www.w3.org/2001/sw/BestPractices/VM/http-examples/2006-01-18/#naming> .
 
 kai:UX a owl:NamedIndividual,
         kai:Digital ;
@@ -226,6 +227,11 @@ kai:SemanticMethodology a owl:NamedIndividual,
     rdfs:label "Semantic Methodology"@en,
         "Méthodologie sémantique"@fr .
 
+kai:SoftwareArchitecture a owl:NamedIndividual,
+        kai:TopicOfInterest ;
+    rdfs:label "Software Architecture"@en,
+        "Architecture logicielle"@fr .
+
 kai:VideoLearningResource a owl:Class ;
     rdfs:label "Video"@en,
         "Vidéo"@fr ;
@@ -262,11 +268,6 @@ kai:SystemInterface a owl:Class ;
         "Interface système"@fr ;
     rdfs:subClassOf kai:KnowledgeExposition .
 
-kai:TutorialPaper a owl:Class ;
-    rdfs:label "Tutorial Paper"@en,
-        "Article tutoriel"@fr ;
-    rdfs:subClassOf kai:PaperLearningResource .
-
 kai:UseCase a owl:Class ;
     rdfs:label "Use Case"@en,
         "Cas d'usage"@fr ;
@@ -285,6 +286,11 @@ kai:EventLearningResource a owl:Class ;
 kai:Function a owl:Class ;
     rdfs:label "Function"@en,
         "Fonction"@fr .
+
+kai:TutorialPaper a owl:Class ;
+    rdfs:label "Tutorial Paper"@en,
+        "Article tutoriel"@fr ;
+    rdfs:subClassOf kai:PaperLearningResource .
 
 kai:Ontology a owl:NamedIndividual,
         kai:SemanticLayer ;
