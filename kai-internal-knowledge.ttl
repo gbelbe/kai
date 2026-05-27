@@ -4,31 +4,31 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
 
-<GraphDatabase> a owl:Class ;
+<file:///Users/20002797/Documents/kai/GraphDatabase> a owl:Class ;
     rdfs:subClassOf kai:Software .
 
-<GraphToVectorSerializer> a owl:Class ;
+<file:///Users/20002797/Documents/kai/GraphToVectorSerializer> a owl:Class ;
     rdfs:subClassOf kai:Software .
 
-<GraphViewer> a owl:Class ;
+<file:///Users/20002797/Documents/kai/GraphViewer> a owl:Class ;
     rdfs:subClassOf kai:Software .
 
-<OntologyCI> a owl:Class ;
+<file:///Users/20002797/Documents/kai/OntologyCI> a owl:Class ;
     rdfs:subClassOf kai:Software .
 
-<OntologyEditor> a owl:Class ;
+<file:///Users/20002797/Documents/kai/OntologyEditor> a owl:Class ;
     rdfs:subClassOf kai:Software .
 
-<Ontology_Versioning_Software> a owl:Class ;
+<file:///Users/20002797/Documents/kai/Ontology_Versioning_Software> a owl:Class ;
     rdfs:subClassOf kai:Software .
 
-<Provenance_Tracking_Rollback> a owl:Class ;
+<file:///Users/20002797/Documents/kai/Provenance_Tracking_Rollback> a owl:Class ;
     rdfs:subClassOf kai:Software .
 
-<ShaclValidator> a owl:Class ;
+<file:///Users/20002797/Documents/kai/ShaclValidator> a owl:Class ;
     rdfs:subClassOf kai:Software .
 
-<Web_Scrapping_Curation> a owl:Class ;
+<file:///Users/20002797/Documents/kai/Web_Scrapping_Curation> a owl:Class ;
     rdfs:subClassOf kai:Software .
 
 <https://example.org/ontology/kai-internal-knowledge> a owl:Ontology ;
@@ -116,6 +116,11 @@ kai:OntologyDevlopment101 a owl:NamedIndividual,
         kai:SemanticModeling,
         kai:Taxonomy ;
     schema:url <https://protege.stanford.edu/publications/ontology_development/ontology101.pdf> .
+
+kai:People a owl:Class ;
+    rdfs:label "People"@en,
+        "Personnes"@fr ;
+    rdfs:subClassOf foaf:Person .
 
 kai:Practical-Knowledge-Modeling a owl:NamedIndividual,
         kai:MoocLearningResource ;
@@ -206,9 +211,6 @@ kai:hasTopicOfInterest a owl:ObjectProperty ;
     rdfs:domain kai:LearningResource ;
     rdfs:range kai:TopicOfInterest .
 
-kai:toto a owl:NamedIndividual,
-        kai:People .
-
 foaf:Person a owl:Class ;
     rdfs:label "Person"@en,
         "Personne"@fr .
@@ -222,11 +224,6 @@ kai:HumanInterface a owl:Class ;
     rdfs:label "Human Interface"@en,
         "Interface humaine"@fr ;
     rdfs:subClassOf kai:KnowledgeExposition .
-
-kai:People a owl:Class ;
-    rdfs:label "People"@en,
-        "Personnes"@fr ;
-    rdfs:subClassOf foaf:Person .
 
 kai:ScientificPaper a owl:Class ;
     rdfs:label "Scientific Paper"@en,
