@@ -4,6 +4,33 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
 
+<GraphDatabase> a owl:Class ;
+    rdfs:subClassOf kai:Software .
+
+<GraphToVectorSerializer> a owl:Class ;
+    rdfs:subClassOf kai:Software .
+
+<GraphViewer> a owl:Class ;
+    rdfs:subClassOf kai:Software .
+
+<OntologyCI> a owl:Class ;
+    rdfs:subClassOf kai:Software .
+
+<OntologyEditor> a owl:Class ;
+    rdfs:subClassOf kai:Software .
+
+<Ontology_Versioning_Software> a owl:Class ;
+    rdfs:subClassOf kai:Software .
+
+<Provenance_Tracking_Rollback> a owl:Class ;
+    rdfs:subClassOf kai:Software .
+
+<ShaclValidator> a owl:Class ;
+    rdfs:subClassOf kai:Software .
+
+<Web_Scrapping_Curation> a owl:Class ;
+    rdfs:subClassOf kai:Software .
+
 <https://example.org/ontology/kai-internal-knowledge> a owl:Ontology ;
     rdfs:label "Kai" .
 
@@ -109,8 +136,6 @@ kai:Semantic_Modeling_for_Data a owl:NamedIndividual,
     rdfs:label "Semantic Modeling for Data"@en,
         "Modélisation sémantique des données"@fr ;
     kai:hasTopicOfInterest kai:SemanticModeling .
-
-kai:Software a owl:Class .
 
 kai:SoftwareArchitect a owl:NamedIndividual,
         kai:Digital ;
@@ -306,6 +331,8 @@ kai:LearningResource a owl:Class ;
     rdfs:label "Learning Resource"@en,
         "Ressource d'apprentissage"@fr ;
     rdfs:comment "All resources needed for learning"@en .
+
+kai:Software a owl:Class .
 
 kai:SemanticModeling a owl:NamedIndividual,
         kai:SemanticLayer ;
