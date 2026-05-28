@@ -4,33 +4,6 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
 
-<file:///Users/20002797/Documents/kai/GraphDatabase> a owl:Class ;
-    rdfs:subClassOf kai:Software .
-
-<file:///Users/20002797/Documents/kai/GraphToVectorSerializer> a owl:Class ;
-    rdfs:subClassOf kai:Software .
-
-<file:///Users/20002797/Documents/kai/GraphViewer> a owl:Class ;
-    rdfs:subClassOf kai:Software .
-
-<file:///Users/20002797/Documents/kai/OntologyCI> a owl:Class ;
-    rdfs:subClassOf kai:Software .
-
-<file:///Users/20002797/Documents/kai/OntologyEditor> a owl:Class ;
-    rdfs:subClassOf kai:Software .
-
-<file:///Users/20002797/Documents/kai/Ontology_Versioning_Software> a owl:Class ;
-    rdfs:subClassOf kai:Software .
-
-<file:///Users/20002797/Documents/kai/Provenance_Tracking_Rollback> a owl:Class ;
-    rdfs:subClassOf kai:Software .
-
-<file:///Users/20002797/Documents/kai/ShaclValidator> a owl:Class ;
-    rdfs:subClassOf kai:Software .
-
-<file:///Users/20002797/Documents/kai/Web_Scrapping_Curation> a owl:Class ;
-    rdfs:subClassOf kai:Software .
-
 <https://example.org/ontology/kai-internal-knowledge> a owl:Ontology ;
     rdfs:label "Kai" .
 
@@ -54,6 +27,18 @@ kai:GraphDatabase a owl:NamedIndividual,
         kai:TopicOfInterest ;
     rdfs:label "Graph Database"@en,
         "Base de données graphe"@fr .
+
+kai:GraphDatabase_Class a owl:Class ;
+    rdfs:label "Graph Database"@en ;
+    rdfs:subClassOf kai:Software .
+
+kai:GraphToVectorSerializer a owl:Class ;
+    rdfs:label "Graph To Vector Serializer"@en ;
+    rdfs:subClassOf kai:Software .
+
+kai:GraphViewer a owl:Class ;
+    rdfs:label "Graph Viewer"@en ;
+    rdfs:subClassOf kai:Software .
 
 kai:GraphViz a owl:NamedIndividual,
         kai:HumanInterface ;
@@ -108,6 +93,10 @@ kai:OOPS_onto_pitfall_scanner a owl:NamedIndividual,
     kai:hasTopicOfInterest kai:SemanticModeling ;
     schema:url <https://www.semantic-web-journal.net/system/files/swj989.pdf> .
 
+kai:OntologyCI a owl:Class ;
+    rdfs:label "Ontology CI"@en ;
+    rdfs:subClassOf kai:Software .
+
 kai:OntologyDevlopment101 a owl:NamedIndividual,
         kai:TutorialPaper ;
     rdfs:label "Ontology Development 101: A Guide to Creating Your First Ontology"@en,
@@ -116,6 +105,14 @@ kai:OntologyDevlopment101 a owl:NamedIndividual,
         kai:SemanticModeling,
         kai:Taxonomy ;
     schema:url <https://protege.stanford.edu/publications/ontology_development/ontology101.pdf> .
+
+kai:OntologyEditor a owl:Class ;
+    rdfs:label "Ontology Editor"@en ;
+    rdfs:subClassOf kai:Software .
+
+kai:OntologyVersioningSoftware a owl:Class ;
+    rdfs:label "Ontology Versioning Software"@en ;
+    rdfs:subClassOf kai:Software .
 
 kai:People a owl:Class ;
     rdfs:label "People"@en,
@@ -129,9 +126,13 @@ kai:Practical-Knowledge-Modeling a owl:NamedIndividual,
     kai:hasTopicOfInterest kai:SemanticModeling ;
     schema:url <https://www.udemy.com/course/practical-knowledge-modelling/> .
 
+kai:ProvenanceTrackingRollback a owl:Class ;
+    rdfs:label "Provenance Tracking / Rollback"@en ;
+    rdfs:subClassOf kai:Software .
+
 kai:SPARQL_Graph_RAG a owl:NamedIndividual,
         kai:ScientificPaper ;
-    kai:hasTopicOfInterest <GraphRAG> ;
+    kai:hasTopicOfInterest kai:GraphRAG ;
     schema:url <https://arxiv.org/html/2512.14277v1> .
 
 kai:SemanticDataEurope a owl:NamedIndividual,
@@ -141,11 +142,18 @@ kai:SemanticDataEurope a owl:NamedIndividual,
     kai:hasTopicOfInterest kai:Ontology,
         kai:SemanticModeling .
 
+kai:SemanticFunction a owl:Class ;
+    rdfs:subClassOf kai:Function .
+
 kai:Semantic_Modeling_for_Data a owl:NamedIndividual,
         kai:BookLearningResource ;
     rdfs:label "Semantic Modeling for Data"@en,
         "Modélisation sémantique des données"@fr ;
     kai:hasTopicOfInterest kai:SemanticModeling .
+
+kai:ShaclValidator a owl:Class ;
+    rdfs:label "SHACL Validator"@en ;
+    rdfs:subClassOf kai:Software .
 
 kai:SoftwareArchitect a owl:NamedIndividual,
         kai:Digital ;
@@ -199,6 +207,10 @@ kai:UX a owl:NamedIndividual,
     schema:image <https://toot>,
         <https://toto.com> .
 
+kai:WebScrappingCuration a owl:Class ;
+    rdfs:label "Web Scrapping / Curation"@en ;
+    rdfs:subClassOf kai:Software .
+
 kai:WebsiteLearningResource a owl:Class ;
     rdfs:label "Website"@en,
         "Site web"@fr ;
@@ -216,9 +228,6 @@ kai:hasTopicOfInterest a owl:ObjectProperty ;
     rdfs:domain kai:LearningResource ;
     rdfs:range kai:TopicOfInterest .
 
-<GraphRAG> a owl:NamedIndividual,
-        kai:HumanInterface .
-
 foaf:Person a owl:Class ;
     rdfs:label "Person"@en,
         "Personne"@fr .
@@ -227,6 +236,10 @@ kai:Business a owl:Class ;
     rdfs:label "Business Function"@en,
         "Fonction métier"@fr ;
     rdfs:subClassOf kai:Function .
+
+kai:GraphRAG a owl:NamedIndividual,
+        kai:HumanInterface ;
+    rdfs:label "GraphRAG"@en .
 
 kai:SemanticLanguage a owl:NamedIndividual,
         kai:SemanticLayer ;
@@ -299,14 +312,14 @@ kai:EventLearningResource a owl:Class ;
         "Événement"@fr ;
     rdfs:subClassOf kai:LearningResource .
 
-kai:Function a owl:Class ;
-    rdfs:label "Function"@en,
-        "Fonction"@fr .
-
 kai:TutorialPaper a owl:Class ;
     rdfs:label "Tutorial Paper"@en,
         "Article tutoriel"@fr ;
     rdfs:subClassOf kai:PaperLearningResource .
+
+kai:Function a owl:Class ;
+    rdfs:label "Function"@en,
+        "Fonction"@fr .
 
 kai:Ontology a owl:NamedIndividual,
         kai:SemanticLayer ;
