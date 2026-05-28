@@ -18,6 +18,10 @@ kai:AdvisorRole a owl:Class ;
 kai:ArchitectRole a owl:NamedIndividual,
         kai:Role .
 
+kai:Ask-Booster a owl:NamedIndividual,
+        kai:InternalUseCase ;
+    rdfs:label "Ask Booster RAG"@en .
+
 kai:CCDP a owl:NamedIndividual,
         kai:DepartmentOrganization .
 
@@ -89,11 +93,6 @@ kai:Inria-SemanticWeb-Mooc a owl:NamedIndividual,
         "MOOC Web Sémantique de l'Inria"@fr ;
     kai:hasTopicOfInterest kai:SemanticModeling ;
     schema:url <https://www.fun-mooc.fr/fr/cours/web-semantique-et-web-de-donnees/> .
-
-kai:InternalUseCase a owl:Class ;
-    rdfs:label "Internal Use Case"@en,
-        "Cas d'usage interne"@fr ;
-    rdfs:subClassOf kai:UseCase .
 
 kai:Jessica a owl:NamedIndividual,
         kai:People ;
@@ -174,9 +173,20 @@ kai:Practical-Knowledge-Modeling a owl:NamedIndividual,
     kai:hasTopicOfInterest kai:SemanticModeling ;
     schema:url <https://www.udemy.com/course/practical-knowledge-modelling/> .
 
+kai:Product2Usages a owl:NamedIndividual,
+        kai:InternalUseCase ;
+    rdfs:label "Usages (Organization of products by use case)"@en .
+
+kai:PromptToProduct a owl:NamedIndividual,
+        kai:InternalUseCase ;
+    rdfs:label "Prompt to Product list: generate quotation from a list of products"@en .
+
 kai:ProvenanceTrackingRollback a owl:Class ;
     rdfs:label "Provenance Tracking / Rollback"@en ;
     rdfs:subClassOf kai:Software .
+
+kai:QueryLM_Collab_Promos a owl:NamedIndividual,
+        kai:InternalUseCase .
 
 kai:SCDP a owl:NamedIndividual,
         kai:DepartmentOrganization .
@@ -386,6 +396,11 @@ kai:TutorialPaper a owl:Class ;
 kai:Function a owl:Class ;
     rdfs:label "Speciality"@en,
         "Specialite"@fr .
+
+kai:InternalUseCase a owl:Class ;
+    rdfs:label "Internal Use Case"@en,
+        "Cas d'usage interne"@fr ;
+    rdfs:subClassOf kai:UseCase .
 
 kai:Ontology a owl:NamedIndividual,
         kai:SemanticLayer ;
