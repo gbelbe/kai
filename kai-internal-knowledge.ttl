@@ -129,6 +129,11 @@ kai:Practical-Knowledge-Modeling a owl:NamedIndividual,
     kai:hasTopicOfInterest kai:SemanticModeling ;
     schema:url <https://www.udemy.com/course/practical-knowledge-modelling/> .
 
+kai:SPARQL_Graph_RAG a owl:NamedIndividual,
+        kai:ScientificPaper ;
+    kai:hasTopicOfInterest <GraphRAG> ;
+    schema:url <https://arxiv.org/html/2512.14277v1> .
+
 kai:SemanticDataEurope a owl:NamedIndividual,
         kai:EventLearningResource ;
     rdfs:label "Semantic Data Europe"@en,
@@ -211,6 +216,9 @@ kai:hasTopicOfInterest a owl:ObjectProperty ;
     rdfs:domain kai:LearningResource ;
     rdfs:range kai:TopicOfInterest .
 
+<GraphRAG> a owl:NamedIndividual,
+        kai:HumanInterface .
+
 foaf:Person a owl:Class ;
     rdfs:label "Person"@en,
         "Personne"@fr .
@@ -219,17 +227,6 @@ kai:Business a owl:Class ;
     rdfs:label "Business Function"@en,
         "Fonction métier"@fr ;
     rdfs:subClassOf kai:Function .
-
-kai:HumanInterface a owl:Class ;
-    rdfs:label "Human Interface"@en,
-        "Interface humaine"@fr ;
-    rdfs:subClassOf kai:KnowledgeExposition .
-
-kai:ScientificPaper a owl:Class ;
-    rdfs:label "Scientific Paper"@en,
-        "Article scientifique"@fr ;
-    rdfs:comment "scientific report"@en ;
-    rdfs:subClassOf kai:PaperLearningResource .
 
 kai:SemanticLanguage a owl:NamedIndividual,
         kai:SemanticLayer ;
@@ -251,6 +248,11 @@ kai:VideoLearningResource a owl:Class ;
         "Vidéo"@fr ;
     rdfs:subClassOf kai:LearningResource .
 
+kai:HumanInterface a owl:Class ;
+    rdfs:label "Human Interface"@en,
+        "Interface humaine"@fr ;
+    rdfs:subClassOf kai:KnowledgeExposition .
+
 kai:KnowledgeExposition a owl:Class ;
     rdfs:label "Knowledge Exposition"@en,
         "Exposition de connaissance"@fr ;
@@ -266,6 +268,12 @@ kai:PaperLearningResource a owl:Class ;
     rdfs:label "Paper"@en,
         "Article"@fr ;
     rdfs:subClassOf kai:LearningResource .
+
+kai:ScientificPaper a owl:Class ;
+    rdfs:label "Scientific Paper"@en,
+        "Article scientifique"@fr ;
+    rdfs:comment "scientific report"@en ;
+    rdfs:subClassOf kai:PaperLearningResource .
 
 kai:SemanticGovernance a owl:NamedIndividual,
         kai:SemanticLayer ;
