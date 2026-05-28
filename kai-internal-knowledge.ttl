@@ -15,6 +15,20 @@ kai:API a owl:NamedIndividual,
 kai:AdvisorRole a owl:Class ;
     rdfs:subClassOf kai:Role .
 
+kai:ArchitectRole a owl:NamedIndividual,
+        kai:Role .
+
+kai:CCDP a owl:NamedIndividual,
+        kai:DepartmentOrganization .
+
+kai:Carine a owl:NamedIndividual,
+        kai:People ;
+    rdfs:label "Carine Chevreux"@en .
+
+kai:Clara a owl:NamedIndividual,
+        kai:People ;
+    rdfs:label "Clara Letscher"@en .
+
 kai:CollaboratorRole a owl:Class ;
     rdfs:subClassOf kai:Role .
 
@@ -27,16 +41,21 @@ kai:CommonModelingPitfalls a owl:NamedIndividual,
 kai:CompanyOrganization a owl:Class ;
     rdfs:subClassOf kai:Organization .
 
-kai:DepartmentOrganization a owl:Class ;
-    rdfs:subClassOf kai:Organization .
-
 kai:ExternalUseCase a owl:Class ;
     rdfs:label "External Use Case"@en,
         "Cas d'usage externe"@fr ;
     rdfs:subClassOf kai:UseCase .
 
+kai:FrancoisS a owl:NamedIndividual,
+        kai:People ;
+    rdfs:label "Francois Serra"@en .
+
+kai:GTDP a owl:NamedIndividual,
+        kai:DepartmentOrganization .
+
 kai:Gaetan a owl:NamedIndividual,
-        kai:People .
+        kai:People ;
+    rdfs:label "Gaetan Belbeoc h"@en .
 
 kai:GraphDatabase a owl:NamedIndividual,
         kai:TopicOfInterest ;
@@ -59,6 +78,10 @@ kai:GraphViz a owl:NamedIndividual,
         kai:HumanInterface ;
     rdfs:label "Graph Visualization"@en,
         "Visualisation de graphe"@fr .
+
+kai:Guillaume a owl:NamedIndividual,
+        kai:People ;
+    rdfs:label "Guillaume Recouvreur"@en .
 
 kai:Inria-SemanticWeb-Mooc a owl:NamedIndividual,
         kai:MoocLearningResource ;
@@ -137,6 +160,13 @@ kai:OntologyVersioningSoftware a owl:Class ;
     rdfs:label "Ontology Versioning Software"@en ;
     rdfs:subClassOf kai:Software .
 
+kai:PDP a owl:NamedIndividual,
+        kai:DepartmentOrganization .
+
+kai:Pavel a owl:NamedIndividual,
+        kai:People ;
+    rdfs:label "Pavel Mihaylov"@en .
+
 kai:Practical-Knowledge-Modeling a owl:NamedIndividual,
         kai:MoocLearningResource ;
     rdfs:label "Practical Knowledge Modeling"@en,
@@ -148,10 +178,16 @@ kai:ProvenanceTrackingRollback a owl:Class ;
     rdfs:label "Provenance Tracking / Rollback"@en ;
     rdfs:subClassOf kai:Software .
 
+kai:SCDP a owl:NamedIndividual,
+        kai:DepartmentOrganization .
+
 kai:SPARQL_Graph_RAG a owl:NamedIndividual,
         kai:ScientificPaper ;
     kai:hasTopicOfInterest kai:GraphRAG ;
     schema:url <https://arxiv.org/html/2512.14277v1> .
+
+<https://example.org/ontology/kai-internal-knowledge/Search&Pub> a owl:NamedIndividual,
+        kai:SubDepartment .
 
 kai:SemanticDataEurope a owl:NamedIndividual,
         kai:EventLearningResource ;
@@ -281,6 +317,9 @@ kai:SoftwareArchitecture a owl:NamedIndividual,
     rdfs:label "Software Architecture"@en,
         "Architecture logicielle"@fr .
 
+kai:SubDepartment a owl:Class ;
+    rdfs:subClassOf kai:DepartmentOrganization .
+
 kai:VideoLearningResource a owl:Class ;
     rdfs:label "Video"@en,
         "Vidéo"@fr ;
@@ -339,31 +378,29 @@ kai:EventLearningResource a owl:Class ;
         "Événement"@fr ;
     rdfs:subClassOf kai:LearningResource .
 
-kai:Role a owl:Class .
-
 kai:TutorialPaper a owl:Class ;
     rdfs:label "Tutorial Paper"@en,
         "Article tutoriel"@fr ;
     rdfs:subClassOf kai:PaperLearningResource .
 
 kai:Function a owl:Class ;
-    rdfs:label "Function"@en,
-        "Fonction"@fr .
+    rdfs:label "Speciality"@en,
+        "Specialite"@fr .
 
 kai:Ontology a owl:NamedIndividual,
         kai:SemanticLayer ;
     rdfs:label "Ontology"@en,
         "Ontologie"@fr .
 
-kai:People a owl:Class ;
-    rdfs:label "People"@en,
-        "Personnes"@fr ;
-    rdfs:subClassOf foaf:Person .
+kai:Role a owl:Class .
 
 kai:BookLearningResource a owl:Class ;
     rdfs:label "Book"@en,
         "Livre"@fr ;
     rdfs:subClassOf kai:LearningResource .
+
+kai:DepartmentOrganization a owl:Class ;
+    rdfs:subClassOf kai:Organization .
 
 kai:Taxonomy a owl:NamedIndividual,
         kai:SemanticLayer ;
@@ -383,6 +420,11 @@ kai:LearningResource a owl:Class ;
     rdfs:label "Learning Resource"@en,
         "Ressource d'apprentissage"@fr ;
     rdfs:comment "All resources needed for learning"@en .
+
+kai:People a owl:Class ;
+    rdfs:label "People"@en,
+        "Personnes"@fr ;
+    rdfs:subClassOf foaf:Person .
 
 kai:Software a owl:Class .
 
