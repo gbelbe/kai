@@ -12,6 +12,12 @@ kai:API a owl:NamedIndividual,
     rdfs:label "API"@en,
         "API"@fr .
 
+kai:AdvisorRole a owl:Class ;
+    rdfs:subClassOf kai:Role .
+
+kai:CollaboratorRole a owl:Class ;
+    rdfs:subClassOf kai:Role .
+
 kai:CommonModelingPitfalls a owl:NamedIndividual,
         kai:TutorialPaper ;
     rdfs:label "Common Modeling Pitfalls"@en ;
@@ -58,7 +64,7 @@ kai:InternalUseCase a owl:Class ;
     rdfs:subClassOf kai:UseCase .
 
 kai:KnowledgeEngineer a owl:NamedIndividual,
-        kai:Digital ;
+        kai:SemanticFunction ;
     rdfs:label "Knowledge Engineer"@en,
         "Ingénieur en connaissance"@fr ;
     kai:hasExpertise kai:Ontology,
@@ -114,6 +120,8 @@ kai:OntologyVersioningSoftware a owl:Class ;
     rdfs:label "Ontology Versioning Software"@en ;
     rdfs:subClassOf kai:Software .
 
+kai:Organization a owl:Class .
+
 kai:People a owl:Class ;
     rdfs:label "People"@en,
         "Personnes"@fr ;
@@ -142,9 +150,6 @@ kai:SemanticDataEurope a owl:NamedIndividual,
     kai:hasTopicOfInterest kai:Ontology,
         kai:SemanticModeling .
 
-kai:SemanticFunction a owl:Class ;
-    rdfs:subClassOf kai:Function .
-
 kai:Semantic_Modeling_for_Data a owl:NamedIndividual,
         kai:BookLearningResource ;
     rdfs:label "Semantic Modeling for Data"@en,
@@ -154,6 +159,9 @@ kai:Semantic_Modeling_for_Data a owl:NamedIndividual,
 kai:ShaclValidator a owl:Class ;
     rdfs:label "SHACL Validator"@en ;
     rdfs:subClassOf kai:Software .
+
+kai:SinglePointOfContactRole a owl:Class ;
+    rdfs:subClassOf kai:Role .
 
 kai:SoftwareArchitect a owl:NamedIndividual,
         kai:Digital ;
@@ -241,6 +249,9 @@ kai:GraphRAG a owl:NamedIndividual,
         kai:HumanInterface ;
     rdfs:label "GraphRAG"@en .
 
+kai:SemanticFunction a owl:Class ;
+    rdfs:subClassOf kai:Function .
+
 kai:SemanticLanguage a owl:NamedIndividual,
         kai:SemanticLayer ;
     rdfs:label "Semantic Language"@en,
@@ -260,6 +271,11 @@ kai:VideoLearningResource a owl:Class ;
     rdfs:label "Video"@en,
         "Vidéo"@fr ;
     rdfs:subClassOf kai:LearningResource .
+
+kai:Digital a owl:Class ;
+    rdfs:label "Digital Function"@en,
+        "Fonction numérique"@fr ;
+    rdfs:subClassOf kai:Function .
 
 kai:HumanInterface a owl:Class ;
     rdfs:label "Human Interface"@en,
@@ -302,15 +318,12 @@ kai:UseCase a owl:Class ;
     rdfs:label "Use Case"@en,
         "Cas d'usage"@fr .
 
-kai:Digital a owl:Class ;
-    rdfs:label "Digital Function"@en,
-        "Fonction numérique"@fr ;
-    rdfs:subClassOf kai:Function .
-
 kai:EventLearningResource a owl:Class ;
     rdfs:label "Event"@en,
         "Événement"@fr ;
     rdfs:subClassOf kai:LearningResource .
+
+kai:Role a owl:Class .
 
 kai:TutorialPaper a owl:Class ;
     rdfs:label "Tutorial Paper"@en,
