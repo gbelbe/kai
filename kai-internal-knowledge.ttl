@@ -12,8 +12,8 @@ kai:API a owl:NamedIndividual,
     rdfs:label "API"@en,
         "API"@fr .
 
-kai:AdvisorRole a owl:Class ;
-    rdfs:subClassOf kai:Role .
+kai:AdvisorRole a owl:NamedIndividual,
+        kai:Role .
 
 kai:AntiFraudPatterns a owl:NamedIndividual,
         kai:InternalUseCase ;
@@ -41,8 +41,8 @@ kai:Clara a owl:NamedIndividual,
         kai:People ;
     rdfs:label "Clara Letscher"@en .
 
-kai:CollaboratorRole a owl:Class ;
-    rdfs:subClassOf kai:Role .
+kai:CollaboratorRole a owl:NamedIndividual,
+        kai:Role .
 
 kai:CommonModelingPitfalls a owl:NamedIndividual,
         kai:TutorialPaper ;
@@ -256,8 +256,8 @@ kai:ShaclValidator a owl:Class ;
     rdfs:label "SHACL Validator"@en ;
     rdfs:subClassOf kai:Software .
 
-kai:SinglePointOfContactRole a owl:Class ;
-    rdfs:subClassOf kai:Role .
+kai:SinglePointOfContactRole a owl:NamedIndividual,
+        kai:Role .
 
 kai:SoftwareArchitect a owl:NamedIndividual,
         kai:Digital ;
