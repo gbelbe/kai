@@ -334,6 +334,10 @@ kai:hasExpertise a owl:ObjectProperty ;
     rdfs:domain kai:Function ;
     rdfs:range kai:TopicOfInterest .
 
+kai:hasRole a owl:ObjectProperty ;
+    rdfs:domain kai:People ;
+    rdfs:range kai:Role .
+
 kai:hasTopicOfInterest a owl:ObjectProperty ;
     rdfs:label "has topic of interest"@en,
         "a pour sujet d'intérêt"@fr ;
@@ -461,8 +465,6 @@ kai:Ontology a owl:NamedIndividual,
     rdfs:label "Ontology"@en,
         "Ontologie"@fr .
 
-kai:Role a owl:Class .
-
 kai:BookLearningResource a owl:Class ;
     rdfs:label "Book"@en,
         "Livre"@fr ;
@@ -470,6 +472,8 @@ kai:BookLearningResource a owl:Class ;
 
 kai:DepartmentOrganization a owl:Class ;
     rdfs:subClassOf kai:Organization .
+
+kai:Role a owl:Class .
 
 kai:Taxonomy a owl:NamedIndividual,
         kai:SemanticLayer ;
