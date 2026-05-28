@@ -56,6 +56,11 @@ kai:CompanyOrganization a owl:Class ;
 kai:ContentAggregation a owl:Class ;
     rdfs:subClassOf kai:ExternalUseCase .
 
+kai:Disjointedness a owl:NamedIndividual,
+        kai:TutorialPaper ;
+    kai:hasTopicOfInterest kai:SemanticModeling ;
+    schema:url <https://www.researchgate.net/publication/220853974_Learning_Disjointness> .
+
 kai:ECommerce a owl:Class ;
     rdfs:subClassOf kai:ExternalUseCase .
 
@@ -458,11 +463,6 @@ kai:Ontology a owl:NamedIndividual,
 
 kai:Role a owl:Class .
 
-kai:TutorialPaper a owl:Class ;
-    rdfs:label "Tutorial Paper"@en,
-        "Article tutoriel"@fr ;
-    rdfs:subClassOf kai:PaperLearningResource .
-
 kai:BookLearningResource a owl:Class ;
     rdfs:label "Book"@en,
         "Livre"@fr ;
@@ -475,6 +475,11 @@ kai:Taxonomy a owl:NamedIndividual,
         kai:SemanticLayer ;
     rdfs:label "Taxonomy"@en,
         "Taxonomie"@fr .
+
+kai:TutorialPaper a owl:Class ;
+    rdfs:label "Tutorial Paper"@en,
+        "Article tutoriel"@fr ;
+    rdfs:subClassOf kai:PaperLearningResource .
 
 kai:SemanticLayer a owl:Class ;
     rdfs:label "Semantic Layer"@en,
