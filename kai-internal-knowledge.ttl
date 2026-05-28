@@ -35,6 +35,9 @@ kai:ExternalUseCase a owl:Class ;
         "Cas d'usage externe"@fr ;
     rdfs:subClassOf kai:UseCase .
 
+kai:Gaetan a owl:NamedIndividual,
+        kai:People .
+
 kai:GraphDatabase a owl:NamedIndividual,
         kai:TopicOfInterest ;
     rdfs:label "Graph Database"@en,
@@ -68,6 +71,14 @@ kai:InternalUseCase a owl:Class ;
     rdfs:label "Internal Use Case"@en,
         "Cas d'usage interne"@fr ;
     rdfs:subClassOf kai:UseCase .
+
+kai:Jessica a owl:NamedIndividual,
+        kai:People ;
+    rdfs:label "Jessica Talisman"@en .
+
+kai:Juan a owl:NamedIndividual,
+        kai:People ;
+    rdfs:label "Juan Sequeda"@en .
 
 kai:KnowledgeEngineer a owl:NamedIndividual,
         kai:SemanticFunction ;
@@ -125,11 +136,6 @@ kai:OntologyEditor a owl:Class ;
 kai:OntologyVersioningSoftware a owl:Class ;
     rdfs:label "Ontology Versioning Software"@en ;
     rdfs:subClassOf kai:Software .
-
-kai:People a owl:Class ;
-    rdfs:label "People"@en,
-        "Personnes"@fr ;
-    rdfs:subClassOf foaf:Person .
 
 kai:Practical-Knowledge-Modeling a owl:NamedIndividual,
         kai:MoocLearningResource ;
@@ -218,6 +224,10 @@ kai:UX a owl:NamedIndividual,
         "Expérience utilisateur (UX)"@fr ;
     schema:image <https://toot>,
         <https://toto.com> .
+
+kai:Veronika a owl:NamedIndividual,
+        kai:People ;
+    rdfs:label "Veronika Heimsbakk"@en .
 
 kai:WebScrappingCuration a owl:Class ;
     rdfs:label "Web Scrapping / Curation"@en ;
@@ -344,6 +354,11 @@ kai:Ontology a owl:NamedIndividual,
         kai:SemanticLayer ;
     rdfs:label "Ontology"@en,
         "Ontologie"@fr .
+
+kai:People a owl:Class ;
+    rdfs:label "People"@en,
+        "Personnes"@fr ;
+    rdfs:subClassOf foaf:Person .
 
 kai:BookLearningResource a owl:Class ;
     rdfs:label "Book"@en,
