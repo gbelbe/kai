@@ -15,6 +15,10 @@ kai:API a owl:NamedIndividual,
 kai:AdvisorRole a owl:Class ;
     rdfs:subClassOf kai:Role .
 
+kai:Archi2Feature a owl:NamedIndividual,
+        kai:InternalUseCase ;
+    rdfs:label "Archi, Software and Features graph living and queryable documentation"@en .
+
 kai:ArchitectRole a owl:NamedIndividual,
         kai:Role .
 
@@ -66,10 +70,6 @@ kai:GraphDatabase a owl:NamedIndividual,
     rdfs:label "Graph Database"@en,
         "Base de données graphe"@fr .
 
-kai:GraphDatabase_Class a owl:Class ;
-    rdfs:label "Graph Database"@en ;
-    rdfs:subClassOf kai:Software .
-
 kai:GraphToVectorSerializer a owl:Class ;
     rdfs:label "Graph To Vector Serializer"@en ;
     rdfs:subClassOf kai:Software .
@@ -116,6 +116,9 @@ kai:KnowledgeGraphConference a owl:NamedIndividual,
     rdfs:label "Knowledge Graph Conference"@en,
         "Conférence Knowledge Graph"@fr ;
     rdfs:comment ""@en .
+
+kai:LPG a owl:Class ;
+    rdfs:subClassOf kai:GraphDatabase_Class .
 
 kai:LearningSparql a owl:NamedIndividual,
         kai:BookLearningResource ;
@@ -177,6 +180,10 @@ kai:Product2Usages a owl:NamedIndividual,
         kai:InternalUseCase ;
     rdfs:label "Usages (Organization of products by use case)"@en .
 
+kai:ProjectCalculators a owl:NamedIndividual,
+        kai:InternalUseCase ;
+    rdfs:label "Project Calculators organised in graph, for precise RAG"@en .
+
 kai:PromptToProduct a owl:NamedIndividual,
         kai:InternalUseCase ;
     rdfs:label "Prompt to Product list: generate quotation from a list of products"@en .
@@ -187,6 +194,9 @@ kai:ProvenanceTrackingRollback a owl:Class ;
 
 kai:QueryLM_Collab_Promos a owl:NamedIndividual,
         kai:InternalUseCase .
+
+kai:RDF a owl:Class ;
+    rdfs:subClassOf kai:GraphDatabase_Class .
 
 kai:SCDP a owl:NamedIndividual,
         kai:DepartmentOrganization .
@@ -340,6 +350,10 @@ kai:Digital a owl:Class ;
         "Fonction numérique"@fr ;
     rdfs:subClassOf kai:Function .
 
+kai:GraphDatabase_Class a owl:Class ;
+    rdfs:label "Graph Database"@en ;
+    rdfs:subClassOf kai:Software .
+
 kai:HumanInterface a owl:Class ;
     rdfs:label "Human Interface"@en,
         "Interface humaine"@fr ;
@@ -397,11 +411,6 @@ kai:Function a owl:Class ;
     rdfs:label "Speciality"@en,
         "Specialite"@fr .
 
-kai:InternalUseCase a owl:Class ;
-    rdfs:label "Internal Use Case"@en,
-        "Cas d'usage interne"@fr ;
-    rdfs:subClassOf kai:UseCase .
-
 kai:Ontology a owl:NamedIndividual,
         kai:SemanticLayer ;
     rdfs:label "Ontology"@en,
@@ -421,6 +430,11 @@ kai:Taxonomy a owl:NamedIndividual,
         kai:SemanticLayer ;
     rdfs:label "Taxonomy"@en,
         "Taxonomie"@fr .
+
+kai:InternalUseCase a owl:Class ;
+    rdfs:label "Internal Use Case"@en,
+        "Cas d'usage interne"@fr ;
+    rdfs:subClassOf kai:UseCase .
 
 kai:SemanticLayer a owl:Class ;
     rdfs:label "Semantic Layer"@en,
