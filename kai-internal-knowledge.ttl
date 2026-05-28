@@ -24,6 +24,12 @@ kai:CommonModelingPitfalls a owl:NamedIndividual,
     kai:hasTopicOfInterest kai:SemanticModeling ;
     schema:url <http://www.meteck.org/files/PitfallsChapter.pdf> .
 
+kai:CompanyOrganization a owl:Class ;
+    rdfs:subClassOf kai:Organization .
+
+kai:DepartmentOrganization a owl:Class ;
+    rdfs:subClassOf kai:Organization .
+
 kai:ExternalUseCase a owl:Class ;
     rdfs:label "External Use Case"@en,
         "Cas d'usage externe"@fr ;
@@ -119,8 +125,6 @@ kai:OntologyEditor a owl:Class ;
 kai:OntologyVersioningSoftware a owl:Class ;
     rdfs:label "Ontology Versioning Software"@en ;
     rdfs:subClassOf kai:Software .
-
-kai:Organization a owl:Class .
 
 kai:People a owl:Class ;
     rdfs:label "People"@en,
@@ -292,6 +296,8 @@ kai:MoocLearningResource a owl:Class ;
         "MOOC"@fr ;
     rdfs:comment "long video tutorial"@en ;
     rdfs:subClassOf kai:LearningResource .
+
+kai:Organization a owl:Class .
 
 kai:PaperLearningResource a owl:Class ;
     rdfs:label "Paper"@en,
