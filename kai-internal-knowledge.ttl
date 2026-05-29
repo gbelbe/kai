@@ -338,6 +338,10 @@ ns1:hasExpertise a owl:ObjectProperty ;
     rdfs:domain ns1:Function ;
     rdfs:range ns1:TopicOfInterest .
 
+ns1:hasProject a owl:ObjectProperty ;
+    rdfs:domain ns1:DepartmentOrganization ;
+    rdfs:range ns1:InternalUseCase .
+
 ns1:hasRole a owl:ObjectProperty ;
     rdfs:domain ns1:People ;
     rdfs:range ns1:Role .
@@ -486,9 +490,6 @@ ns1:BookLearningResource a owl:Class ;
         "Livre"@fr ;
     rdfs:subClassOf ns1:LearningResource .
 
-ns1:DepartmentOrganization a owl:Class ;
-    rdfs:subClassOf ns1:Organization .
-
 ns1:Role a owl:Class .
 
 ns1:Taxonomy a owl:NamedIndividual,
@@ -500,6 +501,9 @@ ns1:TutorialPaper a owl:Class ;
     rdfs:label "Tutorial Paper"@en,
         "Article tutoriel"@fr ;
     rdfs:subClassOf ns1:PaperLearningResource .
+
+ns1:DepartmentOrganization a owl:Class ;
+    rdfs:subClassOf ns1:Organization .
 
 ns1:SemanticLayer a owl:Class ;
     rdfs:label "Semantic Layer"@en,
@@ -515,15 +519,15 @@ ns1:ExternalUseCase a owl:Class ;
         "Cas d'usage externe"@fr ;
     rdfs:subClassOf ns1:UseCase .
 
-ns1:InternalUseCase a owl:Class ;
-    rdfs:label "Internal Use Case"@en,
-        "Cas d'usage interne"@fr ;
-    rdfs:subClassOf ns1:UseCase .
-
 ns1:LearningResource a owl:Class ;
     rdfs:label "Learning Resource"@en,
         "Ressource d'apprentissage"@fr ;
     rdfs:comment "All resources needed for learning"@en .
+
+ns1:InternalUseCase a owl:Class ;
+    rdfs:label "Internal Use Case"@en,
+        "Cas d'usage interne"@fr ;
+    rdfs:subClassOf ns1:UseCase .
 
 ns1:Software a owl:Class .
 
