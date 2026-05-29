@@ -12,9 +12,6 @@ kai:API a owl:NamedIndividual,
     rdfs:label "API"@en,
         "API"@fr .
 
-kai:AdvisorRole a owl:NamedIndividual,
-        kai:Role .
-
 kai:AntiFraudPatterns a owl:NamedIndividual,
         kai:InternalUseCase ;
     rdfs:label "Anti fraud pattern detection"@en .
@@ -121,11 +118,13 @@ kai:Inria-SemanticWeb-Mooc a owl:NamedIndividual,
 
 kai:Jessica a owl:NamedIndividual,
         kai:People ;
-    rdfs:label "Jessica Talisman"@en .
+    rdfs:label "Jessica Talisman"@en ;
+    kai:hasRole kai:AdvisorRole .
 
 kai:Juan a owl:NamedIndividual,
         kai:People ;
-    rdfs:label "Juan Sequeda"@en .
+    rdfs:label "Juan Sequeda"@en ;
+    kai:hasRole kai:AdvisorRole .
 
 kai:KnowledgeEngineer a owl:NamedIndividual,
         kai:SemanticFunction ;
@@ -260,7 +259,7 @@ kai:SinglePointOfContactRole a owl:NamedIndividual,
         kai:Role .
 
 kai:SoftwareArchitect a owl:NamedIndividual,
-        kai:Digital ;
+        kai:DigitalFunction ;
     rdfs:label "Software EnterpriseArchitect"@en,
         "Architecte logiciel"@fr .
 
@@ -306,7 +305,7 @@ kai:URI_Standards_For_Ontologies a owl:NamedIndividual,
     schema:url <https://www.w3.org/2001/sw/BestPractices/VM/http-examples/2006-01-18/#naming> .
 
 kai:UX a owl:NamedIndividual,
-        kai:Digital ;
+        kai:DigitalFunction ;
     rdfs:label "User Experience (UX)"@en,
         "Expérience utilisateur (UX)"@fr ;
     schema:image <https://toot>,
@@ -317,7 +316,8 @@ kai:UnifiedAnalytics a owl:Class ;
 
 kai:Veronika a owl:NamedIndividual,
         kai:People ;
-    rdfs:label "Veronika Heimsbakk"@en .
+    rdfs:label "Veronika Heimsbakk"@en ;
+    kai:hasRole kai:AdvisorRole .
 
 kai:WebScrappingCuration a owl:Class ;
     rdfs:label "Web Scrapping / Curation"@en ;
@@ -393,7 +393,7 @@ kai:VideoLearningResource a owl:Class ;
         "Vidéo"@fr ;
     rdfs:subClassOf kai:LearningResource .
 
-kai:Digital a owl:Class ;
+kai:DigitalFunction a owl:Class ;
     rdfs:label "Digital Function"@en,
         "Fonction numérique"@fr ;
     rdfs:subClassOf kai:Function .
@@ -450,6 +450,9 @@ kai:SystemInterface a owl:Class ;
 kai:UseCase a owl:Class ;
     rdfs:label "Use Case"@en,
         "Cas d'usage"@fr .
+
+kai:AdvisorRole a owl:NamedIndividual,
+        kai:Role .
 
 kai:EventLearningResource a owl:Class ;
     rdfs:label "Event"@en,
