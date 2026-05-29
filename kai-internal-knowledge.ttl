@@ -144,6 +144,9 @@ ns1:KnowledgeGraphConference a owl:NamedIndividual,
         "Conférence Knowledge Graph"@fr ;
     rdfs:comment ""@en .
 
+ns1:LLM-Optimized-ContextFile a owl:NamedIndividual,
+        ns1:TutorialPaper .
+
 ns1:LearningSparql a owl:NamedIndividual,
         ns1:BookLearningResource ;
     rdfs:label "Learning SPARQL"@en,
@@ -180,6 +183,9 @@ ns1:OntologyDevlopment101 a owl:NamedIndividual,
 ns1:OntologyEditor a owl:Class ;
     rdfs:label "Ontology Editor"@en ;
     rdfs:subClassOf ns1:Software .
+
+ns1:OptimizedFile a owl:NamedIndividual,
+        ns1:SystemInterface .
 
 ns1:PDP a owl:NamedIndividual,
         ns1:DepartmentOrganization .
@@ -355,6 +361,10 @@ ns1:isManagedBy a owl:ObjectProperty ;
     rdfs:domain ns1:DepartmentOrganization,
         ns1:InternalUseCase .
 
+ns1:note a owl:AnnotationProperty ;
+    rdfs:label "Note (Markdown)"@en ;
+    rdfs:comment "Freeform Markdown annotation, usable on classes, individuals, and properties."@en .
+
 foaf:Person a owl:Class ;
     rdfs:label "Person"@en,
         "Personne"@fr .
@@ -462,11 +472,6 @@ ns1:SemanticGovernance a owl:Class ;
         "Gouvernance sémantique"@fr ;
     rdfs:subClassOf ns1:SemanticLayer .
 
-ns1:SystemInterface a owl:Class ;
-    rdfs:label "System Interface"@en,
-        "Interface système"@fr ;
-    rdfs:subClassOf ns1:KnowledgeExposition .
-
 ns1:UseCase a owl:Class ;
     rdfs:label "Use Case"@en,
         "Cas d'usage"@fr .
@@ -478,6 +483,11 @@ ns1:EventLearningResource a owl:Class ;
     rdfs:label "Event"@en,
         "Événement"@fr ;
     rdfs:subClassOf ns1:LearningResource .
+
+ns1:SystemInterface a owl:Class ;
+    rdfs:label "System Interface"@en,
+        "Interface système"@fr ;
+    rdfs:subClassOf ns1:KnowledgeExposition .
 
 ns1:Function a owl:Class ;
     rdfs:label "Speciality"@en,
@@ -503,11 +513,6 @@ ns1:Taxonomy a owl:NamedIndividual,
     rdfs:label "Taxonomy"@en,
         "Taxonomie"@fr .
 
-ns1:TutorialPaper a owl:Class ;
-    rdfs:label "Tutorial Paper"@en,
-        "Article tutoriel"@fr ;
-    rdfs:subClassOf ns1:PaperLearningResource .
-
 ns1:SemanticLayer a owl:Class ;
     rdfs:label "Semantic Layer"@en,
         "Couche sémantique"@fr ;
@@ -516,6 +521,11 @@ ns1:SemanticLayer a owl:Class ;
 ns1:TopicOfInterest a owl:Class ;
     rdfs:label "Topic of Interest"@en,
         "Sujet d'intérêt"@fr .
+
+ns1:TutorialPaper a owl:Class ;
+    rdfs:label "Tutorial Paper"@en,
+        "Article tutoriel"@fr ;
+    rdfs:subClassOf ns1:PaperLearningResource .
 
 ns1:DepartmentOrganization a owl:Class ;
     rdfs:subClassOf ns1:Organization .
