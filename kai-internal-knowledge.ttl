@@ -69,9 +69,6 @@ ns1:FrancoisS a owl:NamedIndividual,
     rdfs:label "Francois Serra"@en ;
     ns1:hasRole ns1:CollaboratorRole .
 
-ns1:GTDP a owl:NamedIndividual,
-        ns1:DepartmentOrganization .
-
 ns1:Gaetan a owl:NamedIndividual,
         ns1:People ;
     rdfs:label "Gaetan Belbeoc h"@en ;
@@ -212,7 +209,8 @@ ns1:ProjectCalculators a owl:NamedIndividual,
 
 ns1:PromptToProduct a owl:NamedIndividual,
         ns1:InternalUseCase ;
-    rdfs:label "Prompt to Product list: generate quotation from a list of products"@en .
+    rdfs:label "Prompt to Product list: generate quotation from a list of products"@en ;
+    ns1:isManagedBy ns1:GTDP .
 
 ns1:ProvenanceTrackingRollback a owl:Class ;
     rdfs:label "Provenance Tracking / Rollback"@en ;
@@ -352,6 +350,11 @@ ns1:hasTopicOfInterest a owl:ObjectProperty ;
     rdfs:domain ns1:LearningResource ;
     rdfs:range ns1:TopicOfInterest .
 
+ns1:isManagedBy a owl:ObjectProperty ;
+    rdfs:label "is managed by"@en ;
+    rdfs:domain ns1:DepartmentOrganization,
+        ns1:InternalUseCase .
+
 foaf:Person a owl:Class ;
     rdfs:label "Person"@en,
         "Personne"@fr .
@@ -363,6 +366,9 @@ ns1:Business a owl:Class ;
     rdfs:label "Business Function"@en,
         "Fonction métier"@fr ;
     rdfs:subClassOf ns1:Function .
+
+ns1:GTDP a owl:NamedIndividual,
+        ns1:DepartmentOrganization .
 
 ns1:GraphRAG a owl:NamedIndividual,
         ns1:HumanInterface ;
@@ -502,9 +508,6 @@ ns1:TutorialPaper a owl:Class ;
         "Article tutoriel"@fr ;
     rdfs:subClassOf ns1:PaperLearningResource .
 
-ns1:DepartmentOrganization a owl:Class ;
-    rdfs:subClassOf ns1:Organization .
-
 ns1:SemanticLayer a owl:Class ;
     rdfs:label "Semantic Layer"@en,
         "Couche sémantique"@fr ;
@@ -513,6 +516,9 @@ ns1:SemanticLayer a owl:Class ;
 ns1:TopicOfInterest a owl:Class ;
     rdfs:label "Topic of Interest"@en,
         "Sujet d'intérêt"@fr .
+
+ns1:DepartmentOrganization a owl:Class ;
+    rdfs:subClassOf ns1:Organization .
 
 ns1:ExternalUseCase a owl:Class ;
     rdfs:label "External Use Case"@en,
@@ -524,12 +530,12 @@ ns1:LearningResource a owl:Class ;
         "Ressource d'apprentissage"@fr ;
     rdfs:comment "All resources needed for learning"@en .
 
+ns1:Software a owl:Class .
+
 ns1:InternalUseCase a owl:Class ;
     rdfs:label "Internal Use Case"@en,
         "Cas d'usage interne"@fr ;
     rdfs:subClassOf ns1:UseCase .
-
-ns1:Software a owl:Class .
 
 ns1:People a owl:Class ;
     rdfs:label "People"@en,
