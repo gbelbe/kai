@@ -72,6 +72,11 @@ ns1:Fabien a owl:NamedIndividual,
     rdfs:label "Fabien Gandon"@en ;
     ns1:hasRole ns1:AdvisorRole .
 
+ns1:FairBestPractices a owl:NamedIndividual,
+        ns1:TutorialPaper ;
+    ns1:hasTopicOfInterest ns1:SemanticModeling ;
+    schema:url <https://dgarijo.com/papers/best_practices2020.pdf> .
+
 ns1:FrancoisS a owl:NamedIndividual,
         ns1:People ;
     rdfs:label "Francois Serra"@en ;
@@ -543,12 +548,12 @@ ns1:LearningResource a owl:Class ;
         "Ressource d'apprentissage"@fr ;
     rdfs:comment "All resources needed for learning"@en .
 
+ns1:Software a owl:Class .
+
 ns1:TutorialPaper a owl:Class ;
     rdfs:label "Tutorial Paper"@en,
         "Article tutoriel"@fr ;
     rdfs:subClassOf ns1:PaperLearningResource .
-
-ns1:Software a owl:Class .
 
 ns1:InternalUseCase a owl:Class ;
     rdfs:label "Internal Use Case"@en,
