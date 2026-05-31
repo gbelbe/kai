@@ -1,3 +1,4 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix ns1: <https://example.org/ontology/kai-internal-knowledge#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -5,7 +6,9 @@
 @prefix schema: <https://schema.org/> .
 
 <https://example.org/ontology/kai-internal-knowledge> a owl:Ontology ;
-    rdfs:label "Kai" .
+    rdfs:label "Kai" ;
+    dcterms:description "Kai" ;
+    dcterms:title "Kai" .
 
 ns1: a owl:ObjectProperty .
 
@@ -25,6 +28,11 @@ ns1:Archi2Feature a owl:NamedIndividual,
 ns1:Ask-Booster a owl:NamedIndividual,
         ns1:InternalUseCase ;
     rdfs:label "Ask Booster RAG"@en .
+
+ns1:BuildForReuse a owl:NamedIndividual,
+        ns1:TutorialPaper ;
+    ns1:hasTopicOfInterest ns1:SemanticModeling ;
+    schema:url <https://ceur-ws.org/Vol-2518/paper-BOG4.pdf> .
 
 ns1:CCDP a owl:NamedIndividual,
         ns1:DepartmentOrganization .
@@ -522,11 +530,6 @@ ns1:TopicOfInterest a owl:Class ;
     rdfs:label "Topic of Interest"@en,
         "Sujet d'intérêt"@fr .
 
-ns1:TutorialPaper a owl:Class ;
-    rdfs:label "Tutorial Paper"@en,
-        "Article tutoriel"@fr ;
-    rdfs:subClassOf ns1:PaperLearningResource .
-
 ns1:DepartmentOrganization a owl:Class ;
     rdfs:subClassOf ns1:Organization .
 
@@ -539,6 +542,11 @@ ns1:LearningResource a owl:Class ;
     rdfs:label "Learning Resource"@en,
         "Ressource d'apprentissage"@fr ;
     rdfs:comment "All resources needed for learning"@en .
+
+ns1:TutorialPaper a owl:Class ;
+    rdfs:label "Tutorial Paper"@en,
+        "Article tutoriel"@fr ;
+    rdfs:subClassOf ns1:PaperLearningResource .
 
 ns1:Software a owl:Class .
 
