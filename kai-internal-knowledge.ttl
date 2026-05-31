@@ -74,8 +74,13 @@ ns1:Fabien a owl:NamedIndividual,
 
 ns1:FairBestPractices a owl:NamedIndividual,
         ns1:TutorialPaper ;
-    ns1:hasTopicOfInterest ns1:SemanticModeling ;
+    ns1:hasTopicOfInterest ns1:FAIR ;
     schema:url <https://dgarijo.com/papers/best_practices2020.pdf> .
+
+ns1:FairCookBook a owl:NamedIndividual,
+        ns1:TutorialPaper ;
+    ns1:hasTopicOfInterest ns1:FAIR ;
+    schema:url <https://faircookbook.elixir-europe.org/content/home.html> .
 
 ns1:FrancoisS a owl:NamedIndividual,
         ns1:People ;
@@ -441,6 +446,9 @@ ns1:DigitalFunction a owl:Class ;
         "Fonction numérique"@fr ;
     rdfs:subClassOf ns1:Function .
 
+ns1:FAIR a owl:NamedIndividual,
+        ns1:SemanticLayer .
+
 ns1:GraphDatabase_Class a owl:Class ;
     rdfs:label "Graph Database"@en ;
     rdfs:subClassOf ns1:Software .
@@ -526,11 +534,6 @@ ns1:Taxonomy a owl:NamedIndividual,
     rdfs:label "Taxonomy"@en,
         "Taxonomie"@fr .
 
-ns1:SemanticLayer a owl:Class ;
-    rdfs:label "Semantic Layer"@en,
-        "Couche sémantique"@fr ;
-    rdfs:subClassOf ns1:TopicOfInterest .
-
 ns1:TopicOfInterest a owl:Class ;
     rdfs:label "Topic of Interest"@en,
         "Sujet d'intérêt"@fr .
@@ -548,17 +551,22 @@ ns1:LearningResource a owl:Class ;
         "Ressource d'apprentissage"@fr ;
     rdfs:comment "All resources needed for learning"@en .
 
-ns1:Software a owl:Class .
+ns1:SemanticLayer a owl:Class ;
+    rdfs:label "Semantic Layer"@en,
+        "Couche sémantique"@fr ;
+    rdfs:subClassOf ns1:TopicOfInterest .
 
-ns1:TutorialPaper a owl:Class ;
-    rdfs:label "Tutorial Paper"@en,
-        "Article tutoriel"@fr ;
-    rdfs:subClassOf ns1:PaperLearningResource .
+ns1:Software a owl:Class .
 
 ns1:InternalUseCase a owl:Class ;
     rdfs:label "Internal Use Case"@en,
         "Cas d'usage interne"@fr ;
     rdfs:subClassOf ns1:UseCase .
+
+ns1:TutorialPaper a owl:Class ;
+    rdfs:label "Tutorial Paper"@en,
+        "Article tutoriel"@fr ;
+    rdfs:subClassOf ns1:PaperLearningResource .
 
 ns1:People a owl:Class ;
     rdfs:label "People"@en,
