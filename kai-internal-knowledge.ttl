@@ -67,6 +67,12 @@ ns1:Disjointedness a owl:NamedIndividual,
 ns1:ECommerce a owl:Class ;
     rdfs:subClassOf ns1:ExternalUseCase .
 
+ns1:Export_Serializer a owl:Class ;
+    rdfs:subClassOf ns1:SoftwareFeature .
+
+ns1:ExternalOntologyLinking a owl:Class ;
+    rdfs:subClassOf ns1:SoftwareFeature .
+
 ns1:Fabien a owl:NamedIndividual,
         ns1:People ;
     rdfs:label "Fabien Gandon"@en ;
@@ -108,11 +114,11 @@ ns1:GraphDatabase a owl:NamedIndividual,
 
 ns1:GraphToVectorSerializer a owl:Class ;
     rdfs:label "Graph To Vector Serializer"@en ;
-    rdfs:subClassOf ns1:Software .
+    rdfs:subClassOf ns1:SoftwareFeature .
 
 ns1:GraphViewer a owl:Class ;
     rdfs:label "Graph Viewer"@en ;
-    rdfs:subClassOf ns1:Software .
+    rdfs:subClassOf ns1:SoftwareFeature .
 
 ns1:GraphViz a owl:NamedIndividual,
         ns1:HumanInterface ;
@@ -176,6 +182,9 @@ ns1:LinkedDataPatterns a owl:NamedIndividual,
         ns1:BookLearningResource ;
     schema:url <https://patterns.dataincubator.org/book/linked-data-patterns.pdf> .
 
+ns1:LinkedDataPublishing a owl:Class ;
+    rdfs:subClassOf ns1:SoftwareFeature .
+
 ns1:MCP a owl:NamedIndividual,
         ns1:SystemInterface ;
     rdfs:label "Model Context Protocol"@en,
@@ -198,9 +207,24 @@ ns1:OntologyDevlopment101 a owl:NamedIndividual,
         ns1:Taxonomy ;
     schema:url <https://protege.stanford.edu/publications/ontology_development/ontology101.pdf> .
 
+ns1:OntologyDiff a owl:Class ;
+    rdfs:subClassOf ns1:SoftwareFeature .
+
+ns1:OntologyDocumentation a owl:Class ;
+    rdfs:subClassOf ns1:SoftwareFeature .
+
 ns1:OntologyEditor a owl:Class ;
     rdfs:label "Ontology Editor"@en ;
-    rdfs:subClassOf ns1:Software .
+    rdfs:subClassOf ns1:SoftwareFeature .
+
+ns1:OntologyQualityAnalysis a owl:Class ;
+    rdfs:subClassOf ns1:SoftwareFeature .
+
+ns1:OntologyQuerying a owl:Class ;
+    rdfs:subClassOf ns1:SoftwareFeature .
+
+ns1:OntologyTranslation a owl:Class ;
+    rdfs:subClassOf ns1:SoftwareFeature .
 
 ns1:OptimizedFile a owl:NamedIndividual,
         ns1:SystemInterface .
@@ -236,9 +260,8 @@ ns1:PromptToProduct a owl:NamedIndividual,
     rdfs:label "Prompt to Product list: generate quotation from a list of products"@en ;
     ns1:isManagedBy ns1:GTDP .
 
-ns1:ProvenanceTrackingRollback a owl:Class ;
-    rdfs:label "Provenance Tracking / Rollback"@en ;
-    rdfs:subClassOf ns1:Software .
+ns1:ProvenanceAuditability a owl:Class ;
+    rdfs:subClassOf ns1:SoftwareFeature .
 
 ns1:Punning a owl:NamedIndividual,
         ns1:TutorialPaper ;
@@ -282,7 +305,7 @@ ns1:Semantic_Modeling_for_Data a owl:NamedIndividual,
 
 ns1:ShaclValidator a owl:Class ;
     rdfs:label "SHACL Validator"@en ;
-    rdfs:subClassOf ns1:Software .
+    rdfs:subClassOf ns1:SoftwareFeature .
 
 ns1:SoftwareArchitect a owl:NamedIndividual,
         ns1:DigitalFunction ;
@@ -347,7 +370,7 @@ ns1:Veronika a owl:NamedIndividual,
 
 ns1:WebScrappingCuration a owl:Class ;
     rdfs:label "Web Scrapping / Curation"@en ;
-    rdfs:subClassOf ns1:Software .
+    rdfs:subClassOf ns1:SoftwareFeature .
 
 ns1:WebsiteLearningResource a owl:Class ;
     rdfs:label "Website"@en,
@@ -404,7 +427,7 @@ ns1:GraphRAG a owl:NamedIndividual,
 
 ns1:OntologyCI a owl:Class ;
     rdfs:label "Ontology CI"@en ;
-    rdfs:subClassOf ns1:Software .
+    rdfs:subClassOf ns1:SoftwareFeature .
 
 ns1:RdfWithInference a owl:Class ;
     rdfs:subClassOf ns1:RDF .
@@ -451,7 +474,7 @@ ns1:FAIR a owl:NamedIndividual,
 
 ns1:GraphDatabase_Class a owl:Class ;
     rdfs:label "Graph Database"@en ;
-    rdfs:subClassOf ns1:Software .
+    rdfs:subClassOf ns1:SoftwareFeature .
 
 ns1:HumanInterface a owl:Class ;
     rdfs:label "Human Interface"@en,
@@ -556,8 +579,6 @@ ns1:SemanticLayer a owl:Class ;
         "Couche sémantique"@fr ;
     rdfs:subClassOf ns1:TopicOfInterest .
 
-ns1:Software a owl:Class .
-
 ns1:InternalUseCase a owl:Class ;
     rdfs:label "Internal Use Case"@en,
         "Cas d'usage interne"@fr ;
@@ -577,4 +598,6 @@ ns1:SemanticModeling a owl:NamedIndividual,
         ns1:SemanticLayer ;
     rdfs:label "Semantic Modeling"@en,
         "Modélisation sémantique"@fr .
+
+ns1:SoftwareFeature a owl:Class .
 
