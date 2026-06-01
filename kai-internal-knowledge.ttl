@@ -40,12 +40,14 @@ ns1:CCDP a owl:NamedIndividual,
 ns1:Carine a owl:NamedIndividual,
         ns1:People ;
     rdfs:label "Carine Chevreux"@en ;
-    ns1:hasRole ns1:SinglePointOfContactRole .
+    ns1:hasRole ns1:SinglePointOfContactRole ;
+    ns1:worksFor ns1:GTDP .
 
 ns1:Clara a owl:NamedIndividual,
         ns1:People ;
     rdfs:label "Clara Letscher"@en ;
-    ns1:hasRole ns1:CollaboratorRole .
+    ns1:hasRole ns1:CollaboratorRole ;
+    ns1:worksFor ns1:GTDP .
 
 ns1:CommonModelingPitfalls a owl:NamedIndividual,
         ns1:TutorialPaper ;
@@ -91,12 +93,14 @@ ns1:FairCookBook a owl:NamedIndividual,
 ns1:FrancoisS a owl:NamedIndividual,
         ns1:People ;
     rdfs:label "Francois Serra"@en ;
-    ns1:hasRole ns1:CollaboratorRole .
+    ns1:hasRole ns1:CollaboratorRole ;
+    ns1:worksFor ns1:GTDP .
 
 ns1:Gaetan a owl:NamedIndividual,
         ns1:People ;
     rdfs:label "Gaetan Belbeoc h"@en ;
-    ns1:hasRole ns1:CollaboratorRole .
+    ns1:hasRole ns1:CollaboratorRole ;
+    ns1:worksFor ns1:GTDP .
 
 ns1:GitWorkflowProcess a owl:NamedIndividual,
         ns1:SemanticGovernance .
@@ -189,6 +193,12 @@ ns1:MCP a owl:NamedIndividual,
         ns1:SystemInterface ;
     rdfs:label "Model Context Protocol"@en,
         "Protocole de contexte de modèle"@fr .
+
+ns1:Marine a owl:NamedIndividual,
+        ns1:People ;
+    rdfs:label "Marine Coisne"@en ;
+    ns1:hasRole ns1:SinglePointOfContactRole ;
+    ns1:worksFor ns1:AHS .
 
 ns1:Neo4J a owl:NamedIndividual,
         ns1:LPG .
@@ -406,9 +416,17 @@ ns1:note a owl:AnnotationProperty ;
     rdfs:label "Note (Markdown)"@en ;
     rdfs:comment "Freeform Markdown annotation, usable on classes, individuals, and properties."@en .
 
+ns1:worksFor a owl:ObjectProperty ;
+    rdfs:label "works for"@en ;
+    rdfs:domain ns1:People ;
+    rdfs:range ns1:Organization .
+
 foaf:Person a owl:Class ;
     rdfs:label "Person"@en,
         "Personne"@fr .
+
+ns1:AHS a owl:NamedIndividual,
+        ns1:DepartmentOrganization .
 
 ns1:ArchitectRole a owl:NamedIndividual,
         ns1:Role .
@@ -417,9 +435,6 @@ ns1:Business a owl:Class ;
     rdfs:label "Business Function"@en,
         "Fonction métier"@fr ;
     rdfs:subClassOf ns1:Function .
-
-ns1:GTDP a owl:NamedIndividual,
-        ns1:DepartmentOrganization .
 
 ns1:GraphRAG a owl:NamedIndividual,
         ns1:HumanInterface ;
@@ -447,9 +462,6 @@ ns1:SemanticMethodology a owl:NamedIndividual,
         ns1:SemanticLayer ;
     rdfs:label "Semantic Methodology"@en,
         "Méthodologie sémantique"@fr .
-
-ns1:SinglePointOfContactRole a owl:NamedIndividual,
-        ns1:Role .
 
 ns1:SoftwareArchitecture a owl:NamedIndividual,
         ns1:TopicOfInterest ;
@@ -495,8 +507,6 @@ ns1:MoocLearningResource a owl:Class ;
     rdfs:comment "long video tutorial"@en ;
     rdfs:subClassOf ns1:LearningResource .
 
-ns1:Organization a owl:Class .
-
 ns1:PaperLearningResource a owl:Class ;
     rdfs:label "Paper"@en,
         "Article"@fr ;
@@ -516,6 +526,9 @@ ns1:SemanticGovernance a owl:Class ;
         "Gouvernance sémantique"@fr ;
     rdfs:subClassOf ns1:SemanticLayer .
 
+ns1:SinglePointOfContactRole a owl:NamedIndividual,
+        ns1:Role .
+
 ns1:UseCase a owl:Class ;
     rdfs:label "Use Case"@en,
         "Cas d'usage"@fr .
@@ -527,6 +540,8 @@ ns1:EventLearningResource a owl:Class ;
     rdfs:label "Event"@en,
         "Événement"@fr ;
     rdfs:subClassOf ns1:LearningResource .
+
+ns1:Organization a owl:Class .
 
 ns1:SystemInterface a owl:Class ;
     rdfs:label "System Interface"@en,
@@ -550,6 +565,9 @@ ns1:BookLearningResource a owl:Class ;
         "Livre"@fr ;
     rdfs:subClassOf ns1:LearningResource .
 
+ns1:GTDP a owl:NamedIndividual,
+        ns1:DepartmentOrganization .
+
 ns1:Role a owl:Class .
 
 ns1:Taxonomy a owl:NamedIndividual,
@@ -560,9 +578,6 @@ ns1:Taxonomy a owl:NamedIndividual,
 ns1:TopicOfInterest a owl:Class ;
     rdfs:label "Topic of Interest"@en,
         "Sujet d'intérêt"@fr .
-
-ns1:DepartmentOrganization a owl:Class ;
-    rdfs:subClassOf ns1:Organization .
 
 ns1:ExternalUseCase a owl:Class ;
     rdfs:label "External Use Case"@en,
@@ -578,6 +593,9 @@ ns1:SemanticLayer a owl:Class ;
     rdfs:label "Semantic Layer"@en,
         "Couche sémantique"@fr ;
     rdfs:subClassOf ns1:TopicOfInterest .
+
+ns1:DepartmentOrganization a owl:Class ;
+    rdfs:subClassOf ns1:Organization .
 
 ns1:InternalUseCase a owl:Class ;
     rdfs:label "Internal Use Case"@en,
